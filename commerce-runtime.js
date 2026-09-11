@@ -154,12 +154,16 @@
       document.body.insertAdjacentHTML("beforeend", '<div class="nordic-info" id="checkoutModal"><section class="nordic-info-card"><button type="button" id="checkoutClose">Close</button><h2>Delivery details</h2><form id="checkoutForm" class="formgrid"><input required name="name" placeholder="Full name"><input required type="email" name="email" placeholder="Email"><input required name="phone" placeholder="Phone"><input required name="city" placeholder="City"><input required class="full" name="address" placeholder="Address"><select required name="country" class="full"><option value="Norway">Norway</option><option value="Europe">Europe</option><option value="Peru">Peru</option></select><button class="checkout full" type="submit">CREATE SECURE ORDER DRAFT</button></form><div id="success" style="display:none"></div></section></div>');
       form = document.getElementById("checkoutForm");
       document.getElementById("checkoutClose").onclick = () => document.getElementById("checkoutModal").classList.remove("open");
-      const trigger = document.querySelector(".drawer .checkout");
-      if (trigger) trigger.onclick = () => {
-        if (!Object.keys(cartObject()).length) return;
-        document.getElementById("checkoutModal").classList.add("open");
-      };
     }
+    const trigger = document.querySelector(".drawer .checkout");
+    if (trigger) trigger.onclick = () => {
+      if (!Object.keys(cartObject()).length) return;
+      const modal = document.getElementById("checkoutModal") || document.getElementById("modal");
+      if (!modal) return;
+      document.getElementById("drawer")?.classList.remove("open");
+      modal.classList.add("open", "show");
+      document.getElementById("overlay")?.classList.add("show");
+    };
     if (form.dataset.enhanced) return;
     form.dataset.enhanced = "true";
     const button = form.querySelector('[type="submit"]');
