@@ -1,873 +1,220 @@
-const SELECTED: any[] = [
-  {
-    "id": "printful-car-accessories-1",
-    "sku": "PFL-AUTO-CAP-DRIVER",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Driver Club Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-2",
-    "sku": "PFL-AUTO-CAP-ROADS",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Roads Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-3",
-    "sku": "PFL-AUTO-CAP-GARAGE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Garage Legend Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-4",
-    "sku": "PFL-AUTO-CAP-TORQUE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Torque Life Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-5",
-    "sku": "PFL-AUTO-HOODIE-DRIVER",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Driver Club Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 49.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-6",
-    "sku": "PFL-AUTO-HOODIE-NIGHT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Night Drive Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 52.9,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-7",
-    "sku": "PFL-AUTO-HOODIE-PIT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Pit Lane Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 51.5,
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-8",
-    "sku": "PFL-AUTO-CAP-ROUTE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Route 66 Nordic Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.9,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-9",
-    "sku": "PFL-AUTO-HOODIE-EV",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "EV Charge Club Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-10",
-    "sku": "PFL-AUTO-CAP-SHIFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Shift Happens Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 20.9,
-    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-11",
-    "sku": "PFL-AUTO-HOODIE-RALLY",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Winter Rally Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 53.5,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-12",
-    "sku": "PFL-AUTO-CAP-MOBILITY",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mobility Crew Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-13",
-    "sku": "PFL-AUTO-CAP-APEX",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Apex Drive Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.5,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-14",
-    "sku": "PFL-AUTO-HOODIE-CRUISE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Midnight Cruise Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 55.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-15",
-    "sku": "PFL-AUTO-CAP-TRACK",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Track Day Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-16",
-    "sku": "PFL-AUTO-CAP-PIT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Pit Stop Club Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-17",
-    "sku": "PFL-AUTO-HOODIE-TURBO",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Turbo Night Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-18",
-    "sku": "PFL-AUTO-CAP-LANE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Lane Keeper Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-19",
-    "sku": "PFL-AUTO-HOODIE-ASPHALT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Asphalt Club Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 53.5,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-20",
-    "sku": "PFL-AUTO-CAP-MILEAGE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mileage King Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-21",
-    "sku": "PFL-AUTO-HOODIE-COLD",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Cold Start Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 52.5,
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-22",
-    "sku": "PFL-AUTO-CAP-OVERDRIVE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Overdrive Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-23",
-    "sku": "PFL-AUTO-HOODIE-HIGHWAY",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Highway Ghost Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 56.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-24",
-    "sku": "PFL-AUTO-CAP-TORQUETEAM",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Torque Team Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-25",
-    "sku": "PFL-AUTO-HOODIE-RALLY2",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Rally Frost Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 55.5,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-car-accessories-26",
-    "sku": "PFL-AUTO-CAP-SOFTDRIVE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Soft Drive Club Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-27",
-    "sku": "PFL-AUTO-HOODIE-NIGHTSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Night Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-28",
-    "sku": "PFL-AUTO-CAP-ROUTE2",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Route Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-29",
-    "sku": "PFL-AUTO-HOODIE-GARAGESOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Garage Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 53.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-30",
-    "sku": "PFL-AUTO-CAP-LANESOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Lane Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-31",
-    "sku": "PFL-AUTO-HOODIE-CRUISESOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Cruise Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 55.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-32",
-    "sku": "PFL-AUTO-CAP-TORQUESOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Torque Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-33",
-    "sku": "PFL-AUTO-HOODIE-HWYSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Highway Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 52.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-34",
-    "sku": "PFL-AUTO-CAP-MILESOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mileage Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-35",
-    "sku": "PFL-AUTO-HOODIE-RALLYSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Rally Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 56.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-36",
-    "sku": "PFL-AUTO-CAP-PITSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Pit Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-37",
-    "sku": "PFL-AUTO-HOODIE-ASPHALTSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Asphalt Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-38",
-    "sku": "PFL-AUTO-CAP-OVERSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Overdrive Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-39",
-    "sku": "PFL-AUTO-HOODIE-COLDSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Cold Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 53.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-40",
-    "sku": "PFL-AUTO-CAP-TRACKSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Track Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-41",
-    "sku": "PFL-AUTO-HOODIE-APEXSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Apex Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 55.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-42",
-    "sku": "PFL-AUTO-CAP-SHIFTSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Shift Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-43",
-    "sku": "PFL-AUTO-HOODIE-MIDSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Midnight Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 57.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-44",
-    "sku": "PFL-AUTO-CAP-ROADSSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Soft Roads Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-45",
-    "sku": "PFL-AUTO-HOODIE-DRIVERSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Driver Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 52.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-46",
-    "sku": "PFL-AUTO-CAP-MOBSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mobility Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-47",
-    "sku": "PFL-AUTO-HOODIE-WINTERSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Winter Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 56.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-48",
-    "sku": "PFL-AUTO-CAP-COAST",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Coast Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-49",
-    "sku": "PFL-AUTO-HOODIE-OPENSOFT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Open Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-car-accessories-50",
-    "sku": "PFL-AUTO-CAP-JOURNEY",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Soft Journey Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  }
-];
+const BASE = "https://api.printful.com";
+
 const SECTOR_ALIASES: Record<string, string> = {
-  "beauty": "beauty",
-  "perfume": "beauty",
-  "perfumes": "beauty",
-  "skincare": "beauty",
-  "toys": "toys",
-  "kids": "toys",
-  "kid": "toys",
-  "children": "toys",
-  "electronics": "electronics",
-  "tech": "electronics",
-  "technology": "electronics",
-  "pet supplies": "pet supplies",
-  "pets": "pet supplies",
-  "pet": "pet supplies",
-  "home living": "home living",
-  "home": "home living",
-  "living": "home living",
-  "fitness": "fitness",
-  "outdoor": "fitness",
-  "sports": "fitness",
-  "solar energy": "solar energy",
-  "energy": "solar energy",
-  "solar": "solar energy",
-  "car accessories": "car accessories",
-  "car": "car accessories",
-  "auto": "car accessories",
-  "automotive": "car accessories"
+  beauty: "beauty", perfume: "beauty", perfumes: "beauty", skincare: "beauty",
+  toys: "toys", kids: "toys", kid: "toys", children: "toys",
+  electronics: "electronics", tech: "electronics", technology: "electronics",
+  "pet supplies": "pet supplies", pets: "pet supplies", pet: "pet supplies",
+  "home living": "home living", home: "home living", living: "home living",
+  fitness: "fitness", outdoor: "fitness", sports: "fitness",
+  "solar energy": "solar energy", energy: "solar energy", solar: "solar energy",
+  "car accessories": "car accessories", car: "car accessories", auto: "car accessories", automotive: "car accessories",
 };
+
+/** Printful catalog category IDs chosen per Nordic sector (POD merch only). */
+const SECTOR_CATEGORIES: Record<string, number[]> = {
+  beauty: [48, 195, 29, 2, 258, 202],
+  toys: [3, 228, 55, 105, 202],
+  electronics: [244, 245, 250, 243, 251, 198, 202],
+  "pet supplies": [48, 49, 29, 16, 202],
+  "home living": [55, 56, 195, 258, 252, 230, 198],
+  fitness: [28, 7, 29, 98, 271, 221],
+  "solar energy": [55, 56, 48, 21, 202],
+  "car accessories": [42, 40, 15, 93, 28, 221],
+};
+
+const TYPE_MARKUP: Record<string, number> = {
+  default: 2.35,
+};
+
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
+
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
-  if (!key) return SELECTED[0]?.sector || "beauty";
+  if (!key) return "beauty";
   if (SECTOR_ALIASES[key]) return SECTOR_ALIASES[key];
   for (const [alias, sector] of Object.entries(SECTOR_ALIASES)) {
     if (key.includes(alias) || alias.includes(key)) return sector;
   }
-  return key;
+  return SECTOR_ALIASES[key] ? SECTOR_ALIASES[key] : (SECTOR_CATEGORIES[key] ? key : "beauty");
 }
-function curated(sector: string) {
-  return SELECTED
-    .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
-    .map((p, i) => ({
-      id: String(p.id || `printful-selected-${i}`),
-      sku: String(p.sku || ""),
-      supplier: "Printful",
-      provider: "printful",
-      name: String(p.name || "Printful product"),
-      category: String(p.category || sector),
-      supplierPriceUsd: money(p.supplierPriceUsd) || money(p.suggestedRetailUsd),
-      suggestedRetailUsd: money(p.suggestedRetailUsd) || money(p.supplierPriceUsd),
-      image: String(p.image || ""),
-      sector: String(p.sector || sector),
-    }))
-    .filter((p) => p.suggestedRetailUsd > 0 && p.name);
+
+function authHeaders(token?: string, storeId?: string) {
+  const headers: Record<string, string> = { "User-Agent": "NordicStore/1.0" };
+  if (token) headers.Authorization = `Bearer ${token}`;
+  if (storeId) headers["X-PF-Store-Id"] = storeId;
+  return headers;
 }
+
+function normalizeCatalog(row: any, index: number, sector: string, costHint = 0) {
+  const cost = money(costHint);
+  const retail = cost > 0 ? money(cost * (TYPE_MARKUP.default || 2.35)) : 0;
+  return {
+    id: String(row?.id || `printful-catalog-${index}`),
+    sku: `PFL-${row?.id || index}`,
+    supplier: "Printful",
+    provider: "printful",
+    printfulProductId: String(row?.id || ""),
+    name: String(row?.title || row?.name || "Printful product"),
+    category: String(row?.type_name || row?.type || sector),
+    brand: String(row?.brand || "Printful"),
+    supplierPriceUsd: cost || retail,
+    suggestedRetailUsd: retail || cost,
+    image: String(row?.image || ""),
+    sector,
+    compliance: "EU/Nordic POD merch only — apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims",
+  };
+}
+
+function normalizeStore(row: any, index: number, sector: string) {
+  const sync = row?.sync_product || row;
+  const retail = money(sync?.retail_price || row?.retail_price);
+  return {
+    id: String(sync?.id || `printful-store-${index}`),
+    sku: String(sync?.external_id || sync?.id || ""),
+    supplier: "Printful",
+    provider: "printful",
+    printfulProductId: String(sync?.id || ""),
+    name: String(sync?.name || "Printful product"),
+    category: "Printful",
+    brand: "Printful",
+    supplierPriceUsd: retail,
+    suggestedRetailUsd: retail,
+    image: String(sync?.thumbnail_url || sync?.image || ""),
+    sector,
+    compliance: "EU/Nordic POD merch only — apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims",
+  };
+}
+
+async function loadStoreProducts(headers: Record<string, string>, sector: string) {
+  const url = new URL(BASE + "/store/products");
+  url.searchParams.set("limit", "50");
+  url.searchParams.set("offset", "0");
+  const response = await fetch(url, { headers });
+  if (!response.ok) return [] as any[];
+  const result: any = await response.json().catch(() => ({}));
+  const list = Array.isArray(result?.result) ? result.result : [];
+  const out = [];
+  for (const row of list.slice(0, 50)) {
+    const base = normalizeStore(row, out.length, sector);
+    try {
+      const detailRes = await fetch(`${BASE}/store/products/${base.id}`, { headers });
+      const detail: any = await detailRes.json().catch(() => ({}));
+      if (detailRes.ok) {
+        const variants = Array.isArray(detail?.result?.sync_variants) ? detail.result.sync_variants : [];
+        const priced = variants.find((v: any) => money(v?.retail_price) > 0) || variants[0];
+        const retail = money(priced?.retail_price);
+        if (retail > 0) {
+          base.supplierPriceUsd = retail;
+          base.suggestedRetailUsd = retail;
+        }
+        base.sku = String(priced?.sku || base.sku);
+        const preview = priced?.files?.find?.((f: any) => f?.type === "preview")?.preview_url;
+        if (preview) base.image = String(preview);
+      }
+    } catch (_) {}
+    if (base.name && base.suggestedRetailUsd > 0) out.push(base);
+  }
+  return out;
+}
+
+async function loadCatalogByCategories(headers: Record<string, string>, sector: string) {
+  const cats = SECTOR_CATEGORIES[sector] || SECTOR_CATEGORIES.beauty;
+  const seen = new Set<string>();
+  const collected: any[] = [];
+  const fallbackCats = [229, 4, 5, 6, 1];
+  const allCats = [...cats, ...fallbackCats.filter((c) => !cats.includes(c))];
+  for (const categoryId of allCats) {
+    if (collected.length >= 60) break;
+    const url = new URL(BASE + "/products");
+    url.searchParams.set("category_id", String(categoryId));
+    const response = await fetch(url, { headers });
+    if (!response.ok) continue;
+    const result: any = await response.json().catch(() => ({}));
+    const list = Array.isArray(result?.result) ? result.result : [];
+    for (const row of list) {
+      const id = String(row?.id || "");
+      if (!id || seen.has(id) || row?.is_discontinued) continue;
+      seen.add(id);
+      collected.push(row);
+      if (collected.length >= 60) break;
+    }
+  }
+  // Price a subset in parallel (first 50)
+  const slice = collected.slice(0, 50);
+  const priced = await Promise.all(
+    slice.map(async (row, index) => {
+      let cost = 0;
+      try {
+        const detailRes = await fetch(`${BASE}/products/${row.id}`, { headers });
+        if (detailRes.ok) {
+          const detail: any = await detailRes.json();
+          const variants = Array.isArray(detail?.result?.variants) ? detail.result.variants : [];
+          const inStock = variants.find((v: any) => v?.in_stock && money(v?.price) > 0) || variants.find((v: any) => money(v?.price) > 0);
+          cost = money(inStock?.price);
+          if (inStock?.image) row.image = inStock.image;
+        }
+      } catch (_) {}
+      const item = normalizeCatalog(row, index, sector, cost);
+      if (!item.suggestedRetailUsd) {
+        item.supplierPriceUsd = 12;
+        item.suggestedRetailUsd = 28.9;
+      }
+      return item;
+    })
+  );
+  return priced.filter((p) => p.name && p.suggestedRetailUsd > 0).slice(0, 50);
+}
+
 export async function onRequestGet(context: any) {
   const url = new URL(context.request.url);
   const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
-  const defaultSector = String(SELECTED[0]?.sector || "beauty");
-  const sector = resolveSector(wanted || defaultSector);
-  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
-  const products = curated(sector).slice(0, 50);
-  return Response.json(
-    { ok: true, supplier: "printful", sector, query: sector, products, count: products.length, source: "printful-selected-primary", markets: ["NO", "EU", "PE"] },
-    { status: products.length ? 200 : 503, headers }
-  );
+  const sector = resolveSector(wanted || "beauty");
+  const headersOut = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
+  const token = context.env.PRINTFUL_API_TOKEN ? String(context.env.PRINTFUL_API_TOKEN) : "";
+  const storeId = context.env.PRINTFUL_STORE_ID ? String(context.env.PRINTFUL_STORE_ID) : "";
+  const headers = authHeaders(token || undefined, storeId || undefined);
+
+  try {
+    if (token) {
+      const storeProducts = await loadStoreProducts(headers, sector);
+      if (storeProducts.length >= 8) {
+        return Response.json({
+          ok: true,
+          supplier: "Printful",
+          sector,
+          query: sector,
+          products: storeProducts.slice(0, 50),
+          count: Math.min(storeProducts.length, 50),
+          source: "printful-live-store",
+          markets: ["NO", "EU", "PE"],
+          compliance: "EU/Nordic POD merch",
+        }, { headers: headersOut });
+      }
+    }
+
+    const catalog = await loadCatalogByCategories(headers, sector);
+    return Response.json({
+      ok: true,
+      supplier: "Printful",
+      sector,
+      query: sector,
+      products: catalog,
+      count: catalog.length,
+      source: "printful-live-catalog",
+      markets: ["NO", "EU", "PE"],
+      compliance: "EU/Nordic POD merch",
+    }, { status: catalog.length ? 200 : 503, headers: headersOut });
+  } catch (error) {
+    return Response.json({
+      error: error instanceof Error ? error.message : "Printful request failed",
+      products: [],
+      supplier: "Printful",
+      sector,
+      source: "printful-error",
+    }, { status: 502, headers: headersOut });
+  }
 }

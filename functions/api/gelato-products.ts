@@ -1,873 +1,229 @@
-const SELECTED: any[] = [
-  {
-    "id": "gelato-car-accessories-1",
-    "sku": "GEL-AUTO-CAP-DRIVER",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Driver Club Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-2",
-    "sku": "GEL-AUTO-CAP-ROADS",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Roads Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-3",
-    "sku": "GEL-AUTO-CAP-GARAGE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Garage Legend Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-4",
-    "sku": "GEL-AUTO-CAP-TORQUE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Torque Life Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-5",
-    "sku": "GEL-AUTO-HOODIE-DRIVER",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Driver Club Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 49.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-6",
-    "sku": "GEL-AUTO-HOODIE-NIGHT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Night Drive Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 52.9,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-7",
-    "sku": "GEL-AUTO-HOODIE-PIT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Pit Lane Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 51.5,
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-8",
-    "sku": "GEL-AUTO-CAP-ROUTE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Route 66 Nordic Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.9,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-9",
-    "sku": "GEL-AUTO-HOODIE-EV",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "EV Charge Club Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-10",
-    "sku": "GEL-AUTO-CAP-SHIFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Shift Happens Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 20.9,
-    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-11",
-    "sku": "GEL-AUTO-HOODIE-RALLY",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Winter Rally Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 53.5,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-12",
-    "sku": "GEL-AUTO-CAP-MOBILITY",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mobility Crew Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-13",
-    "sku": "GEL-AUTO-CAP-APEX",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Apex Drive Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.5,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-14",
-    "sku": "GEL-AUTO-HOODIE-CRUISE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Midnight Cruise Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 55.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-15",
-    "sku": "GEL-AUTO-CAP-TRACK",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Track Day Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-16",
-    "sku": "GEL-AUTO-CAP-PIT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Pit Stop Club Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-17",
-    "sku": "GEL-AUTO-HOODIE-TURBO",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Turbo Night Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-18",
-    "sku": "GEL-AUTO-CAP-LANE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Lane Keeper Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-19",
-    "sku": "GEL-AUTO-HOODIE-ASPHALT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Asphalt Club Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 53.5,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-20",
-    "sku": "GEL-AUTO-CAP-MILEAGE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mileage King Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-21",
-    "sku": "GEL-AUTO-HOODIE-COLD",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Cold Start Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 52.5,
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-22",
-    "sku": "GEL-AUTO-CAP-OVERDRIVE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Overdrive Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-23",
-    "sku": "GEL-AUTO-HOODIE-HIGHWAY",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Highway Ghost Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 56.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-24",
-    "sku": "GEL-AUTO-CAP-TORQUETEAM",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Torque Team Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-25",
-    "sku": "GEL-AUTO-HOODIE-RALLY2",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Rally Frost Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 55.5,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-car-accessories-26",
-    "sku": "GEL-AUTO-CAP-SOFTDRIVE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Soft Drive Club Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-27",
-    "sku": "GEL-AUTO-HOODIE-NIGHTSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Night Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-28",
-    "sku": "GEL-AUTO-CAP-ROUTE2",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Route Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-29",
-    "sku": "GEL-AUTO-HOODIE-GARAGESOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Garage Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 53.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-30",
-    "sku": "GEL-AUTO-CAP-LANESOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Lane Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-31",
-    "sku": "GEL-AUTO-HOODIE-CRUISESOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Cruise Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 55.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-32",
-    "sku": "GEL-AUTO-CAP-TORQUESOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Torque Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-33",
-    "sku": "GEL-AUTO-HOODIE-HWYSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Highway Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 52.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-34",
-    "sku": "GEL-AUTO-CAP-MILESOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mileage Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-35",
-    "sku": "GEL-AUTO-HOODIE-RALLYSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Rally Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 56.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-36",
-    "sku": "GEL-AUTO-CAP-PITSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Pit Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-37",
-    "sku": "GEL-AUTO-HOODIE-ASPHALTSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Asphalt Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-38",
-    "sku": "GEL-AUTO-CAP-OVERSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Overdrive Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-39",
-    "sku": "GEL-AUTO-HOODIE-COLDSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Cold Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 53.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-40",
-    "sku": "GEL-AUTO-CAP-TRACKSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Track Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-41",
-    "sku": "GEL-AUTO-HOODIE-APEXSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Apex Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 55.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-42",
-    "sku": "GEL-AUTO-CAP-SHIFTSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Shift Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-43",
-    "sku": "GEL-AUTO-HOODIE-MIDSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Midnight Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 57.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-44",
-    "sku": "GEL-AUTO-CAP-ROADSSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Soft Roads Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.9,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-45",
-    "sku": "GEL-AUTO-HOODIE-DRIVERSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Driver Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 52.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-46",
-    "sku": "GEL-AUTO-CAP-MOBSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mobility Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-47",
-    "sku": "GEL-AUTO-HOODIE-WINTERSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Winter Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 56.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-48",
-    "sku": "GEL-AUTO-CAP-COAST",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Coast Soft Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-49",
-    "sku": "GEL-AUTO-HOODIE-OPENSOFT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Open Soft Zip Hoodie",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 18.5,
-    "suggestedRetailUsd": 54.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "hoodie",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-car-accessories-50",
-    "sku": "GEL-AUTO-CAP-JOURNEY",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Soft Journey Cap",
-    "category": "Auto Merch",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "cap",
-    "sector": "car accessories",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  }
-];
+const PRODUCT_BASE = "https://product.gelatoapis.com";
+const ECOM_BASE = "https://ecommerce.gelatoapis.com";
+
 const SECTOR_ALIASES: Record<string, string> = {
-  "beauty": "beauty",
-  "perfume": "beauty",
-  "perfumes": "beauty",
-  "skincare": "beauty",
-  "toys": "toys",
-  "kids": "toys",
-  "kid": "toys",
-  "children": "toys",
-  "electronics": "electronics",
-  "tech": "electronics",
-  "technology": "electronics",
-  "pet supplies": "pet supplies",
-  "pets": "pet supplies",
-  "pet": "pet supplies",
-  "home living": "home living",
-  "home": "home living",
-  "living": "home living",
-  "fitness": "fitness",
-  "outdoor": "fitness",
-  "sports": "fitness",
-  "solar energy": "solar energy",
-  "energy": "solar energy",
-  "solar": "solar energy",
-  "car accessories": "car accessories",
-  "car": "car accessories",
-  "auto": "car accessories",
-  "automotive": "car accessories"
+  beauty: "beauty", perfume: "beauty", perfumes: "beauty", skincare: "beauty",
+  toys: "toys", kids: "toys", kid: "toys", children: "toys",
+  electronics: "electronics", tech: "electronics", technology: "electronics",
+  "pet supplies": "pet supplies", pets: "pet supplies", pet: "pet supplies",
+  "home living": "home living", home: "home living", living: "home living",
+  fitness: "fitness", outdoor: "fitness", sports: "fitness",
+  "solar energy": "solar energy", energy: "solar energy", solar: "solar energy",
+  "car accessories": "car accessories", car: "car accessories", auto: "car accessories", automotive: "car accessories",
 };
+
+/** Preferred Gelato catalog UIDs per sector (POD merch). Unknown UIDs are skipped. */
+const SECTOR_CATALOGS: Record<string, string[]> = {
+  beauty: ["apparel", "tote-bags", "mugs", "posters", "canvas"],
+  toys: ["posters", "apparel", "canvas", "cards"],
+  electronics: ["phone-cases", "apparel", "mugs", "posters"],
+  "pet supplies": ["apparel", "tote-bags", "mugs", "posters"],
+  "home living": ["posters", "canvas", "mugs", "tote-bags", "apparel", "pillows"],
+  fitness: ["apparel", "tote-bags", "posters", "mugs"],
+  "solar energy": ["posters", "tote-bags", "apparel", "canvas"],
+  "car accessories": ["apparel", "tote-bags", "posters", "mugs"],
+};
+
+const FALLBACK_CATALOGS = ["posters", "apparel", "mugs", "canvas", "cards", "tote-bags", "phone-cases", "pillows", "calendars", "framed-posters"];
+
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
+
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
-  if (!key) return SELECTED[0]?.sector || "beauty";
+  if (!key) return "beauty";
   if (SECTOR_ALIASES[key]) return SECTOR_ALIASES[key];
   for (const [alias, sector] of Object.entries(SECTOR_ALIASES)) {
     if (key.includes(alias) || alias.includes(key)) return sector;
   }
-  return key;
+  return SECTOR_CATALOGS[key] ? key : "beauty";
 }
-function curated(sector: string) {
-  return SELECTED
-    .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
-    .map((p, i) => ({
-      id: String(p.id || `gelato-selected-${i}`),
-      sku: String(p.sku || ""),
-      supplier: "Gelato",
-      provider: "gelato",
-      name: String(p.name || "Gelato product"),
-      category: String(p.category || sector),
-      supplierPriceUsd: money(p.supplierPriceUsd) || money(p.suggestedRetailUsd),
-      suggestedRetailUsd: money(p.suggestedRetailUsd) || money(p.supplierPriceUsd),
-      image: String(p.image || ""),
-      sector: String(p.sector || sector),
-    }))
-    .filter((p) => p.suggestedRetailUsd > 0 && p.name);
+
+function prettyTitle(productUid: string, catalogUid: string, product: any) {
+  if (product?.title) return String(product.title);
+  if (product?.name) return String(product.name);
+  const bits = String(productUid || "").split("_").filter(Boolean);
+  const human = bits
+    .slice(0, 6)
+    .map((b) => b.replace(/-/g, " "))
+    .join(" · ");
+  const cat = String(catalogUid || "Gelato").replace(/-/g, " ");
+  return human ? `${cat}: ${human}` : `Gelato ${cat} product`;
 }
+
+function estimateRetail(catalogUid: string) {
+  const c = String(catalogUid || "").toLowerCase();
+  if (c.includes("mug")) return { cost: 6.5, retail: 18.9 };
+  if (c.includes("tote")) return { cost: 7.1, retail: 22.5 };
+  if (c.includes("poster") || c.includes("canvas")) return { cost: 8.2, retail: 24.9 };
+  if (c.includes("phone") || c.includes("case")) return { cost: 8.8, retail: 24.9 };
+  if (c.includes("pillow")) return { cost: 11, retail: 32.9 };
+  if (c.includes("apparel") || c.includes("shirt") || c.includes("hoodie")) return { cost: 9.4, retail: 29.9 };
+  return { cost: 9, retail: 26.9 };
+}
+
+function normalizeCatalogProduct(product: any, index: number, sector: string, catalogUid: string) {
+  const uid = String(product?.productUid || product?.id || `gelato-${index}`);
+  const prices = estimateRetail(catalogUid);
+  const retail = money(product?.price?.basePrice ?? product?.price?.amount ?? product?.price) || prices.retail;
+  const cost = money(product?.cost ?? product?.supplierPrice) || prices.cost;
+  return {
+    id: uid,
+    sku: uid.slice(0, 48),
+    supplier: "Gelato",
+    provider: "gelato",
+    gelatoProductUid: uid,
+    name: prettyTitle(uid, catalogUid, product),
+    category: String(product?.category || catalogUid || sector),
+    brand: "Gelato",
+    supplierPriceUsd: cost,
+    suggestedRetailUsd: retail,
+    image: String(product?.previewUrl || product?.imageUrl || product?.thumbnailUrl || product?.image || ""),
+    sector,
+    catalogUid,
+    compliance: "EU/Nordic POD merch only — apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims",
+  };
+}
+
+function normalizeEcom(product: any, index: number, sector: string) {
+  const retail = money(
+    product?.price?.basePrice ?? product?.price?.amount ?? product?.price ?? product?.suggestedRetailUsd ?? product?.retailPrice
+  );
+  return {
+    id: String(product?.id || product?.productUid || `gelato-ecom-${index}`),
+    sku: String(product?.sku || product?.productUid || product?.id || ""),
+    supplier: "Gelato",
+    provider: "gelato",
+    gelatoProductUid: String(product?.productUid || product?.id || ""),
+    name: String(product?.title || product?.name || "Gelato product"),
+    category: String(product?.category || sector),
+    brand: "Gelato",
+    supplierPriceUsd: retail,
+    suggestedRetailUsd: retail,
+    image: String(product?.previewUrl || product?.imageUrl || product?.image || product?.thumbnailUrl || ""),
+    sector,
+    compliance: "EU/Nordic POD merch only — apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims",
+  };
+}
+
+async function listCatalogUids(headers: Record<string, string>) {
+  const response = await fetch(`${PRODUCT_BASE}/v3/catalogs`, { headers });
+  if (!response.ok) return [] as string[];
+  const result: any = await response.json().catch(() => []);
+  const list = Array.isArray(result) ? result : Array.isArray(result?.catalogs) ? result.catalogs : [];
+  return list.map((c: any) => String(c?.catalogUid || c?.uid || c?.id || "")).filter(Boolean);
+}
+
+async function searchCatalog(headers: Record<string, string>, catalogUid: string, limit: number) {
+  const response = await fetch(`${PRODUCT_BASE}/v3/catalogs/${encodeURIComponent(catalogUid)}/products:search`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ offset: 0, limit }),
+  });
+  if (!response.ok) return [] as any[];
+  const result: any = await response.json().catch(() => ({}));
+  if (Array.isArray(result?.products)) return result.products;
+  if (Array.isArray(result)) return result;
+  return [];
+}
+
+async function loadStoreProducts(headers: Record<string, string>, storeId: string, sector: string) {
+  const url = new URL(`${ECOM_BASE}/v1/stores/${storeId}/products`);
+  url.searchParams.set("limit", "100");
+  url.searchParams.set("offset", "0");
+  const response = await fetch(url.toString(), { headers });
+  if (!response.ok) return [] as any[];
+  const result: any = await response.json().catch(() => ({}));
+  const list = Array.isArray(result?.products) ? result.products : Array.isArray(result) ? result : [];
+  return list.map((p: any, i: number) => normalizeEcom(p, i, sector)).filter((p: any) => p.name && p.suggestedRetailUsd > 0);
+}
+
+async function loadCatalogProducts(headers: Record<string, string>, sector: string) {
+  const available = await listCatalogUids(headers);
+  const preferred = SECTOR_CATALOGS[sector] || SECTOR_CATALOGS.beauty;
+  const ordered = [
+    ...preferred.filter((c) => !available.length || available.includes(c)),
+    ...available.filter((c) => !preferred.includes(c)),
+    ...FALLBACK_CATALOGS.filter((c) => !preferred.includes(c) && !available.includes(c)),
+  ];
+  const uniqueCatalogs = [...new Set(ordered)];
+  const seen = new Set<string>();
+  const out: any[] = [];
+  for (const catalogUid of uniqueCatalogs) {
+    if (out.length >= 50) break;
+    const need = Math.min(25, 50 - out.length);
+    const products = await searchCatalog(headers, catalogUid, need + 5);
+    for (const product of products) {
+      const item = normalizeCatalogProduct(product, out.length, sector, catalogUid);
+      if (!item.id || seen.has(item.id)) continue;
+      seen.add(item.id);
+      out.push(item);
+      if (out.length >= 50) break;
+    }
+  }
+  return out.slice(0, 50);
+}
+
 export async function onRequestGet(context: any) {
   const url = new URL(context.request.url);
   const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
-  const defaultSector = String(SELECTED[0]?.sector || "beauty");
-  const sector = resolveSector(wanted || defaultSector);
-  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
-  const products = curated(sector).slice(0, 50);
-  return Response.json(
-    { ok: true, supplier: "gelato", sector, query: sector, products, count: products.length, source: "gelato-selected-primary", markets: ["NO", "EU", "PE"] },
-    { status: products.length ? 200 : 503, headers }
-  );
+  const sector = resolveSector(wanted || "beauty");
+  const headersOut = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
+  const apiKey = context.env.GELATO_API_KEY;
+  if (!apiKey) {
+    return Response.json({ error: "Gelato is not configured", products: [], supplier: "Gelato", sector, source: "gelato-unconfigured" }, { status: 503, headers: headersOut });
+  }
+  const headers = { "X-API-KEY": String(apiKey), "content-type": "application/json", "User-Agent": "NordicStore/1.0" };
+
+  try {
+    let storeId = context.env.GELATO_STORE_ID ? String(context.env.GELATO_STORE_ID) : "";
+    if (!storeId) {
+      const storesRes = await fetch(`${ECOM_BASE}/v1/stores`, { headers });
+      if (storesRes.ok) {
+        const stores: any = await storesRes.json().catch(() => ({}));
+        const list = Array.isArray(stores?.stores) ? stores.stores : Array.isArray(stores) ? stores : [];
+        storeId = String(list[0]?.id || list[0]?.storeId || "");
+      }
+    }
+    if (storeId) {
+      const storeProducts = await loadStoreProducts(headers, storeId, sector);
+      if (storeProducts.length >= 8) {
+        return Response.json({
+          ok: true,
+          supplier: "Gelato",
+          sector,
+          query: sector,
+          products: storeProducts.slice(0, 50),
+          count: Math.min(storeProducts.length, 50),
+          source: "gelato-live-store",
+          storeId,
+          markets: ["NO", "EU", "PE"],
+          compliance: "EU/Nordic POD merch",
+        }, { headers: headersOut });
+      }
+    }
+
+    const catalog = await loadCatalogProducts(headers, sector);
+    return Response.json({
+      ok: true,
+      supplier: "Gelato",
+      sector,
+      query: sector,
+      products: catalog,
+      count: catalog.length,
+      source: "gelato-live-catalog",
+      markets: ["NO", "EU", "PE"],
+      compliance: "EU/Nordic POD merch",
+    }, { status: catalog.length ? 200 : 503, headers: headersOut });
+  } catch (error) {
+    return Response.json({
+      error: error instanceof Error ? error.message : "Gelato request failed",
+      products: [],
+      supplier: "Gelato",
+      sector,
+      source: "gelato-error",
+    }, { status: 502, headers: headersOut });
+  }
 }
