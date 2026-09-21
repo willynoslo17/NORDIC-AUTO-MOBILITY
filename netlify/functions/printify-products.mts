@@ -1,6 +1,5 @@
 const BASE = "https://api.printify.com/v1";
 
-// Per-store curated catalog — PRIMARY source for storefront (never replace with shared shop dump)
 const SELECTED: any[] = [
   {
     "id": "printify-car-accessories-1",
@@ -226,6 +225,156 @@ const SELECTED: any[] = [
     "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
     "matchType": "cap",
     "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-16",
+    "sku": "PFY-AUTO-CAP-PIT",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Pit Stop Club Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-17",
+    "sku": "PFY-AUTO-HOODIE-TURBO",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Turbo Night Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 54.9,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-18",
+    "sku": "PFY-AUTO-CAP-LANE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Lane Keeper Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-19",
+    "sku": "PFY-AUTO-HOODIE-ASPHALT",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Asphalt Club Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 53.5,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-20",
+    "sku": "PFY-AUTO-CAP-MILEAGE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Mileage King Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-21",
+    "sku": "PFY-AUTO-HOODIE-COLD",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Cold Start Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 52.5,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-22",
+    "sku": "PFY-AUTO-CAP-OVERDRIVE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Overdrive Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.9,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-23",
+    "sku": "PFY-AUTO-HOODIE-HIGHWAY",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Highway Ghost Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 56.5,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-24",
+    "sku": "PFY-AUTO-CAP-TORQUETEAM",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Torque Team Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printify-car-accessories-25",
+    "sku": "PFY-AUTO-HOODIE-RALLY2",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Rally Frost Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 55.5,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
   }
 ];
 
@@ -310,18 +459,11 @@ async function enrichFromLive(token: string, shopId: string, curatedProducts: an
     const result: any = await response.json();
     const list = Array.isArray(result?.data) ? result.data : Array.isArray(result) ? result : [];
     if (!list.length) return curatedProducts;
-
     const typeWords: Record<string, string[]> = {
-      tote: ["tote", "bag"],
-      tee: ["t-shirt", "tshirt", "tee", "shirt"],
-      mug: ["mug", "cup", "coffee"],
-      crewneck: ["crewneck", "crew neck", "sweatshirt"],
-      hoodie: ["hoodie", "zip"],
-      poster: ["poster", "print"],
-      case: ["case", "phone", "tough"],
-      cap: ["cap", "hat"],
+      tote: ["tote", "bag"], tee: ["t-shirt", "tshirt", "tee", "shirt"], mug: ["mug", "cup", "coffee"],
+      crewneck: ["crewneck", "crew neck", "sweatshirt"], hoodie: ["hoodie", "zip"],
+      poster: ["poster", "print"], case: ["case", "phone", "tough"], cap: ["cap", "hat"],
     };
-
     return curatedProducts.map((item) => {
       const words = typeWords[String(item.matchType || "").toLowerCase()] || [];
       const match = list.find((live: any) => {
@@ -360,30 +502,15 @@ export default async (req: Request, context: any) => {
   const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
   const defaultSector = String(SELECTED[0]?.sector || "beauty");
   const sector = resolveSector(wanted || defaultSector);
-  const headers = {
-    "access-control-allow-origin": "*",
-    "cache-control": "public, max-age=60",
-  };
-
-  // PRIMARY: curated per-store list. Live Printify only enriches — never replaces.
+  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
   let products = curated(sector).slice(0, 30);
   const token = (typeof Netlify !== "undefined" && Netlify.env?.get) ? Netlify.env.get("PRINTIFY_API_TOKEN") : context?.env?.PRINTIFY_API_TOKEN;
   const shopId = ((typeof Netlify !== "undefined" && Netlify.env?.get) ? Netlify.env.get("PRINTIFY_SHOP_ID") : context?.env?.PRINTIFY_SHOP_ID) || "28847802";
   if (token && products.length) {
     products = await enrichFromLive(String(token), String(shopId), products);
   }
-
   return Response.json(
-    {
-      ok: true,
-      supplier: "printify",
-      sector,
-      query: sector,
-      products,
-      count: products.length,
-      source: "printify-selected-primary",
-      markets: ["NO", "EU", "PE"],
-    },
+    { ok: true, supplier: "printify", sector, query: sector, products, count: products.length, source: "printify-selected-primary", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
   );
 };

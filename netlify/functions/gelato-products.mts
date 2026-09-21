@@ -223,9 +223,158 @@ const SELECTED: any[] = [
     "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
     "matchType": "cap",
     "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-16",
+    "sku": "GEL-AUTO-CAP-PIT",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Pit Stop Club Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-17",
+    "sku": "GEL-AUTO-HOODIE-TURBO",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Turbo Night Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 54.9,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-18",
+    "sku": "GEL-AUTO-CAP-LANE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Lane Keeper Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-19",
+    "sku": "GEL-AUTO-HOODIE-ASPHALT",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Asphalt Club Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 53.5,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-20",
+    "sku": "GEL-AUTO-CAP-MILEAGE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Mileage King Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-21",
+    "sku": "GEL-AUTO-HOODIE-COLD",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Cold Start Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 52.5,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-22",
+    "sku": "GEL-AUTO-CAP-OVERDRIVE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Overdrive Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.9,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-23",
+    "sku": "GEL-AUTO-HOODIE-HIGHWAY",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Highway Ghost Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 56.5,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-24",
+    "sku": "GEL-AUTO-CAP-TORQUETEAM",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Torque Team Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "gelato-car-accessories-25",
+    "sku": "GEL-AUTO-HOODIE-RALLY2",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Rally Frost Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 55.5,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
   }
 ];
-
 const SECTOR_ALIASES: Record<string, string> = {
   "beauty": "beauty",
   "perfume": "beauty",
@@ -255,12 +404,10 @@ const SECTOR_ALIASES: Record<string, string> = {
   "auto": "car accessories",
   "automotive": "car accessories"
 };
-
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
-
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
   if (!key) return SELECTED[0]?.sector || "beauty";
@@ -270,7 +417,6 @@ function resolveSector(raw: string) {
   }
   return key;
 }
-
 function curated(sector: string) {
   return SELECTED
     .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
@@ -288,7 +434,6 @@ function curated(sector: string) {
     }))
     .filter((p) => p.suggestedRetailUsd > 0 && p.name);
 }
-
 export default async (req: Request, context: any) => {
   if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
   const url = new URL(req.url);
@@ -298,16 +443,7 @@ export default async (req: Request, context: any) => {
   const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
   const products = curated(sector).slice(0, 30);
   return Response.json(
-    {
-      ok: true,
-      supplier: "gelato",
-      sector,
-      query: sector,
-      products,
-      count: products.length,
-      source: "gelato-selected-primary",
-      markets: ["NO", "EU", "PE"],
-    },
+    { ok: true, supplier: "gelato", sector, query: sector, products, count: products.length, source: "gelato-selected-primary", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
   );
 };
