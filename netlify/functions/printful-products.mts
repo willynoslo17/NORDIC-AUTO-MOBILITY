@@ -1,94 +1,259 @@
-const BASE = "https://api.printful.com";
+const SELECTED: any[] = [
+  {
+    "id": "printful-car-accessories-1",
+    "sku": "PFL-AUTO-CAP-DRIVER",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Driver Club Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.9,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-2",
+    "sku": "PFL-AUTO-CAP-ROADS",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Roads Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-3",
+    "sku": "PFL-AUTO-CAP-GARAGE",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Garage Legend Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-4",
+    "sku": "PFL-AUTO-CAP-TORQUE",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Torque Life Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-5",
+    "sku": "PFL-AUTO-HOODIE-DRIVER",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Driver Club Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 49.9,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-6",
+    "sku": "PFL-AUTO-HOODIE-NIGHT",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Night Drive Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 52.9,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-7",
+    "sku": "PFL-AUTO-HOODIE-PIT",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Pit Lane Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 51.5,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-8",
+    "sku": "PFL-AUTO-CAP-ROUTE",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Route 66 Nordic Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.9,
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-9",
+    "sku": "PFL-AUTO-HOODIE-EV",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "EV Charge Club Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 54.9,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-10",
+    "sku": "PFL-AUTO-CAP-SHIFT",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Shift Happens Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 20.9,
+    "image": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-11",
+    "sku": "PFL-AUTO-HOODIE-RALLY",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Winter Rally Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 53.5,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-12",
+    "sku": "PFL-AUTO-CAP-MOBILITY",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Mobility Crew Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-13",
+    "sku": "PFL-AUTO-CAP-APEX",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Apex Drive Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.5,
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-14",
+    "sku": "PFL-AUTO-HOODIE-CRUISE",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Midnight Cruise Zip Hoodie",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 18.5,
+    "suggestedRetailUsd": 55.9,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "hoodie",
+    "sector": "car accessories"
+  },
+  {
+    "id": "printful-car-accessories-15",
+    "sku": "PFL-AUTO-CAP-TRACK",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Track Day Cap",
+    "category": "Auto Merch",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "cap",
+    "sector": "car accessories"
+  }
+];
 
-const SECTOR_KEYWORDS: Record<string, string[]> = {
-  "beauty": [
-    "beauty",
-    "perfume",
-    "skincare",
-    "cosmetic",
-    "glow",
-    "tote",
-    "t-shirt",
-    "tee",
-    "mug",
-    "crewneck"
-  ],
-  "toys": [
-    "toy",
-    "kid",
-    "kids",
-    "child",
-    "poster",
-    "t-shirt",
-    "tee",
-    "educational",
-    "abc"
-  ],
-  "electronics": [
-    "tech",
-    "electronic",
-    "phone",
-    "case",
-    "tough",
-    "gadget",
-    "circuit",
-    "debug"
-  ],
-  "pet supplies": [
-    "pet",
-    "dog",
-    "cat",
-    "paw",
-    "tote",
-    "t-shirt",
-    "tee",
-    "animal"
-  ],
-  "home living": [
-    "home",
-    "living",
-    "decor",
-    "hygge",
-    "tote",
-    "poster",
-    "mug",
-    "kitchen",
-    "pillow"
-  ],
-  "fitness": [
-    "fitness",
-    "outdoor",
-    "trail",
-    "sport",
-    "hoodie",
-    "zip",
-    "t-shirt",
-    "tee",
-    "crewneck",
-    "gym"
-  ],
-  "solar energy": [
-    "solar",
-    "energy",
-    "watt",
-    "green",
-    "tote",
-    "poster",
-    "clean",
-    "eco"
-  ],
-  "car accessories": [
-    "car",
-    "auto",
-    "driver",
-    "garage",
-    "cap",
-    "hat",
-    "hoodie",
-    "zip",
-    "mobility",
-    "route"
-  ]
+const SECTOR_ALIASES: Record<string, string> = {
+  "beauty": "beauty",
+  "perfume": "beauty",
+  "perfumes": "beauty",
+  "skincare": "beauty",
+  "toys": "toys",
+  "kids": "toys",
+  "kid": "toys",
+  "children": "toys",
+  "electronics": "electronics",
+  "tech": "electronics",
+  "technology": "electronics",
+  "pet supplies": "pet supplies",
+  "pets": "pet supplies",
+  "pet": "pet supplies",
+  "home living": "home living",
+  "home": "home living",
+  "living": "home living",
+  "fitness": "fitness",
+  "outdoor": "fitness",
+  "sports": "fitness",
+  "solar energy": "solar energy",
+  "energy": "solar energy",
+  "solar": "solar energy",
+  "car accessories": "car accessories",
+  "car": "car accessories",
+  "auto": "car accessories",
+  "automotive": "car accessories"
 };
 
 function money(value: unknown) {
@@ -96,82 +261,54 @@ function money(value: unknown) {
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
 
-function normalize(row: any, index: number) {
-  const sync = row?.sync_product || row;
-  const retail = money(sync?.retail_price || row?.retail_price);
-  return {
-    id: String(sync?.id || `printful-${index}`),
-    sku: String(sync?.external_id || sync?.id || ""),
-    supplier: "Printful",
-    provider: "printful",
-    name: String(sync?.name || "Printful product"),
-    category: "Printful",
-    supplierPriceUsd: retail,
-    suggestedRetailUsd: retail,
-    image: String(sync?.thumbnail_url || sync?.image || ""),
-  };
+function resolveSector(raw: string) {
+  const key = String(raw || "").toLowerCase().trim();
+  if (!key) return SELECTED[0]?.sector || "beauty";
+  if (SECTOR_ALIASES[key]) return SECTOR_ALIASES[key];
+  for (const [alias, sector] of Object.entries(SECTOR_ALIASES)) {
+    if (key.includes(alias) || alias.includes(key)) return sector;
+  }
+  return key;
 }
 
-function matchesSector(p: any, sector: string) {
-  const keys = SECTOR_KEYWORDS[sector] || SECTOR_KEYWORDS.beauty;
-  const text = [p.name, p.category, p.sku].join(" ").toLowerCase();
-  return keys.some((k) => text.includes(k));
+function curated(sector: string) {
+  return SELECTED
+    .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
+    .map((p, i) => ({
+      id: String(p.id || `printful-selected-${i}`),
+      sku: String(p.sku || ""),
+      supplier: "Printful",
+      provider: "printful",
+      name: String(p.name || "Printful product"),
+      category: String(p.category || sector),
+      supplierPriceUsd: money(p.supplierPriceUsd) || money(p.suggestedRetailUsd),
+      suggestedRetailUsd: money(p.suggestedRetailUsd) || money(p.supplierPriceUsd),
+      image: String(p.image || ""),
+      sector: String(p.sector || sector),
+    }))
+    .filter((p) => p.suggestedRetailUsd > 0 && p.name);
 }
 
-export default async (req: Request) => {
+export default async (req: Request, context: any) => {
   if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
-  const token = Netlify.env.get("PRINTFUL_API_TOKEN");
-  const reqUrl = new URL(req.url);
-  const wanted = (reqUrl.searchParams.get("q") || reqUrl.searchParams.get("sector") || "beauty").toLowerCase().trim();
-  const sector = SECTOR_KEYWORDS[wanted] ? wanted : "beauty";
-  const headersOut = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
-  if (!token) return Response.json({ error: "Printful is not configured", products: [], sector, query: sector }, { status: 503, headers: headersOut });
-  try {
-    const headers: Record<string, string> = { Authorization: `Bearer ${token}` };
-    const pfStore = Netlify.env.get("PRINTFUL_STORE_ID"); if (pfStore) headers["X-PF-Store-Id"] = String(pfStore);
-    const url = new URL(BASE + "/store/products");
-    url.searchParams.set("limit", "20");
-    url.searchParams.set("offset", "0");
-    const response = await fetch(url, { headers });
-    const result: any = await response.json();
-    if (!response.ok) {
-      return Response.json({ error: result?.error?.message || result?.result || "Printful product request failed", products: [] }, { status: 502, headers: headersOut });
-    }
-    const list = Array.isArray(result?.result) ? result.result : [];
-    let products = list.map(normalize).filter((p: any) => p.name);
-    const detailed = [];
-    for (const product of products.slice(0, 20)) {
-      try {
-        const detailRes = await fetch(`${BASE}/store/products/${product.id}`, { headers });
-        const detail: any = await detailRes.json();
-        if (!detailRes.ok) { detailed.push(product); continue; }
-        const variants = Array.isArray(detail?.result?.sync_variants) ? detail.result.sync_variants : [];
-        const priced = variants.find((v: any) => money(v?.retail_price) > 0) || variants[0];
-        const retail = money(priced?.retail_price);
-        detailed.push({
-          ...product,
-          sku: String(priced?.sku || product.sku || ""),
-          supplierPriceUsd: retail || product.supplierPriceUsd,
-          suggestedRetailUsd: retail || product.suggestedRetailUsd,
-          image: product.image || String(priced?.files?.find?.((f: any) => f?.type === "preview")?.preview_url || ""),
-        });
-      } catch (_) {
-        detailed.push(product);
-      }
-    }
-    let out = detailed.filter((p: any) => p.suggestedRetailUsd > 0);
-    const filtered = out.filter((p) => matchesSector(p, sector));
-    if (filtered.length >= 1) out = filtered;
-    return Response.json({
+  const url = new URL(req.url);
+  const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
+  const defaultSector = String(SELECTED[0]?.sector || "beauty");
+  const sector = resolveSector(wanted || defaultSector);
+  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
+  const products = curated(sector).slice(0, 30);
+  return Response.json(
+    {
       ok: true,
       supplier: "printful",
       sector,
       query: sector,
-      products: out.slice(0, 30),
+      products,
+      count: products.length,
+      source: "printful-selected-primary",
       markets: ["NO", "EU", "PE"],
-    }, { headers: headersOut });
-  } catch (error) {
-    return Response.json({ error: error instanceof Error ? error.message : "Printful request failed", products: [] }, { status: 502, headers: headersOut });
-  }
+    },
+    { status: products.length ? 200 : 503, headers }
+  );
 };
 export const config = { path: "/api/printful-products" };
