@@ -1,4 +1,6 @@
-# Nordic Auto & Mobility
+# Motrull — Auto & Mobility
+
+Storefront brand: **Motrull** · https://motrull.no/ · Motrull er et varemerke fra ML Internasjonal. (Repo / Pages project: `NORDIC-AUTO-MOBILITY`, formerly "Nordic Auto & Mobility".)
 
 International storefront for Norway, Europe and Peru. Responsive catalog, market localization, cart, delivery options, test checkout and supplier-ready API endpoints.
 ## Direct commerce activation
