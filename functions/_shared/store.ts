@@ -4,4 +4,6 @@ export const STORE = {
   brand: "Motrull",
   domain: "motrull.no",
   siteUrl: "https://motrull.no/",
+  /** Catalog sector used by the Gelato/Printful endpoints (never taken from the query string). */
+  sector: "car accessories",
 } as const;
