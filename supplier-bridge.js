@@ -314,6 +314,11 @@
     ]);
     window.nordicCatalogs = { cj, printify, gelato, printful };
     mountSwitcher();
+    /* Hide supplier tabs that have no products (e.g. an empty Gelato catalog). */
+    document.querySelectorAll("[data-supplier-switch]").forEach(btn => {
+      const k = btn.getAttribute("data-supplier-switch");
+      btn.hidden = !(window.nordicCatalogs[k] || []).length;
+    });
     const first = ["cj", "printify", "gelato", "printful"].find(k => window.nordicCatalogs[k].length) || "cj";
     const active = applyActiveCatalog(first);
     if (!cj.length && !printify.length && !gelato.length && !printful.length) {
