@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "no": "Bilinteriør",
+      "es": "Accesorios para el interior del auto",
+      "intro_no": "Når du velger bilinteriør, bør du først kontrollere bilmodell, årsmodell og hvor tilbehøret skal monteres. Sammenlign mål, feste og kompatibilitet oppgitt for varen med behovene dine, og vurder om tilbehøret passer i kupeen uten å hindre førerens sikt eller betjening. Se etter opplysninger om monteringsanvisning og krav til kjøretøy og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir accesorios para el interior del auto, revisa el modelo y año del auto y dónde instalarás el accesorio. Compara las medidas, el tipo de fijación y la compatibilidad indicados con lo que necesitas y considera si el accesorio encaja sin obstruir la visibilidad ni los mandos. Comprueba las instrucciones de instalación y los requisitos del vehículo. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    },
+    {
+      "no": "Utvendig biltilbehør",
+      "es": "Accesorios exteriores para el auto",
+      "intro_no": "Når du velger utvendig biltilbehør, bør du først kontrollere bilmerke, modell, årsmodell og plasseringen på bilen. Sammenlign mål, festemetode og kompatibilitet med behovene dine, og vurder om varen er oppgitt for den aktuelle kjøretøytypen og bruken. Se etter opplysninger om monteringsråd og eventuelle begrensninger og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir accesorios exteriores para el auto, revisa la marca, el modelo, el año y la ubicación en el vehículo. Compara las medidas, la fijación y la compatibilidad indicadas con lo que necesitas y considera si el artículo se indica para ese tipo de vehículo y uso. Comprueba las indicaciones de montaje y posibles limitaciones. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    },
+    {
+      "no": "Oppbevaring i bilen",
+      "es": "Organización y almacenamiento en el auto",
+      "intro_no": "Når du velger oppbevaring i bilen, bør du først kontrollere hva du vil oppbevare og hvor det skal plasseres. Sammenlign mål, festepunkter og materialer med behovene dine, og vurder om løsningen passer i bilen og lar nødvendige områder være frie. Se etter opplysninger om montering og bruksinformasjon og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir organización y almacenamiento en el auto, revisa qué guardarás y dónde lo colocarás. Compara las medidas, los puntos de sujeción y los materiales con lo que necesitas y considera si la solución cabe y mantiene libres las zonas necesarias. Comprueba el montaje y la información de uso disponible. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    },
+    {
+      "no": "Lading og strømtilbehør",
+      "es": "Carga y accesorios eléctricos",
+      "intro_no": "Når du velger lading og strømtilbehør, bør du først kontrollere kjøretøyets tilkobling og de tekniske dataene som kreves. Sammenlign oppgitt spenning, kontakt og kompatibilitet med behovene dine, og vurder om tilbehøret samsvarer med kjøretøyet og utstyret ditt. Se etter opplysninger om sikkerhetsinformasjon og instruksjoner for bruk og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir carga y accesorios eléctricos, revisa la conexión del vehículo y los datos técnicos necesarios. Compara el voltaje, el conector y la compatibilidad indicados con lo que necesitas y considera si el accesorio corresponde al vehículo y al equipo que tienes. Comprueba la información de seguridad y las instrucciones de uso. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    },
+    {
+      "no": "Rengjøring og vedlikehold",
+      "es": "Limpieza y mantenimiento del vehículo",
+      "intro_no": "Når du velger rengjøring og vedlikehold, bør du først kontrollere hvilke overflater eller deler produktet er oppgitt for. Sammenlign materialer, bruksområde og rengjøringsinstruksjoner med behovene dine, og vurder om produktet passer til overflaten og vedlikeholdet du planlegger. Se etter opplysninger om eventuelle begrensninger og anbefalte forholdsregler og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir limpieza y mantenimiento del vehículo, revisa qué superficies o partes del vehículo contempla el producto. Compara los materiales, el uso previsto y las instrucciones de limpieza con lo que necesitas y considera si el producto sirve para la superficie y el cuidado previsto. Comprueba las limitaciones y precauciones indicadas. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    }
+  ]
+}
