@@ -53,10 +53,17 @@
     return new Intl.NumberFormat("nb-NO", { style: "currency", currency: "NOK", maximumFractionDigits: 0 }).format(nok);
   }
 
-  /* CJ product (with its signed quote) behind a grid id. */
+  /* CJ product (with its signed quote) behind a grid id.
+     /produkt deep-links may pass the raw UUID (externalId/cjPid) while the grid uses 10001+i. */
+  function matchesCatalogId(item, id) {
+    const needle = String(id);
+    return String(item.id) === needle
+      || String(item.externalId || "") === needle
+      || String(item.cjPid || "") === needle;
+  }
   function parentById(id) {
     const list = (window.nordicCatalogs && window.nordicCatalogs.cj) || [];
-    const hit = list.find(item => String(item.id) === String(id));
+    const hit = list.find(item => matchesCatalogId(item, id));
     return hit && hit.quote ? hit : null;
   }
 
@@ -278,11 +285,17 @@
         history.replaceState({}, "", location.pathname);
         return;
       }
-      /* Non-CJ / already in grid products[] or data[] */
-      const list = (typeof products !== "undefined" && Array.isArray(products)) ? products
-        : (typeof data !== "undefined" && Array.isArray(data)) ? data.map(x => ({ id: x.id, name: x.n, base: x.p }))
+      /* Non-CJ / already in grid: match grid id, externalId (pfy-…), or cjPid UUID. */
+      const fromProducts = (typeof products !== "undefined" && Array.isArray(products)) ? products : null;
+      const fromData = (typeof data !== "undefined" && Array.isArray(data))
+        ? data.map(x => ({ id: x.id, name: x.n, base: x.p, externalId: x.externalId, cjPid: x.cjPid }))
+        : null;
+      const fromCatalogs = window.nordicCatalogs
+        ? Object.values(window.nordicCatalogs).flat().filter(Boolean)
         : [];
-      const hit = list.find(item => String(item.id) === String(addId));
+      const list = fromProducts || fromData || fromCatalogs;
+      const hit = list.find(item => matchesCatalogId(item, addId))
+        || fromCatalogs.find(item => matchesCatalogId(item, addId));
       if (hit) {
         nativeAdd(hit.id);
         if (typeof openCart === "function") openCart();

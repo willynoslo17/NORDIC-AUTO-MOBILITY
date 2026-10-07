@@ -88,7 +88,7 @@
   }
 
 
-  const THIRD_PARTY_HAT_BRANDS = /\b(adidas|otto\s*cap|otto\b|yupoong|flexfit|as\s*colour|comfort\s*colors?|beechfield|newhattan)\b/i;
+  const THIRD_PARTY_HAT_BRANDS = /\b(adidas|otto\s*cap|otto\b|yupoong|flexfit|as\s*colour|comfort\s*colors?|beechfield|newhattan|under\s*armour|econscious|atlantis|richardson|valucap|big\s*accessories)\b/i;
   const HAT_WORDS = /\b(hat|hats|cap|caps|beanie|beanies|snapback|trucker|bucket|dad\s*hat|visor)\b/i;
   function isBlockedThirdPartyHat(item) {
     const text = [item && item.name, item && item.brand, item && item.supplier, item && item.category, item && item.cat].join(" ");
@@ -358,33 +358,6 @@
       gelato: loadPodCatalog("gelato", category, query),
       printful: loadPodCatalog("printful", category, query)
     };
-  
-  const NORDIC_CJ_CACHE_KEY = "nordic-cj-cache:v1:" + (location.host || "store");
-  function readCjBrowserCache() {
-    try {
-      const raw = localStorage.getItem(NORDIC_CJ_CACHE_KEY);
-      if (!raw) return null;
-      const parsed = JSON.parse(raw);
-      if (!parsed || !Array.isArray(parsed.products) || !parsed.products.length) return null;
-      if (Date.now() - Number(parsed.at || 0) > 7 * 24 * 3600 * 1000) return null;
-      return parsed.products;
-    } catch (_) { return null; }
-  }
-  function writeCjBrowserCache(products) {
-    try {
-      localStorage.setItem(NORDIC_CJ_CACHE_KEY, JSON.stringify({ at: Date.now(), products: products.slice(0, 600) }));
-    } catch (_) {}
-  }
-
-
-  const THIRD_PARTY_HAT_BRANDS = /\b(adidas|otto\s*cap|otto\b|yupoong|flexfit|as\s*colour|comfort\s*colors?|beechfield|newhattan)\b/i;
-  const HAT_WORDS = /\b(hat|hats|cap|caps|beanie|beanies|snapback|trucker|bucket|dad\s*hat|visor)\b/i;
-  function isBlockedThirdPartyHat(item) {
-    const text = [item && item.name, item && item.brand, item && item.supplier, item && item.category, item && item.cat].join(" ");
-    return THIRD_PARTY_HAT_BRANDS.test(text) && HAT_WORDS.test(text);
-  }
-
-  window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
     /* Render each supplier as soon as it answers (or falls back after its timeout). */
     const settle = key => loaders[key]
       .catch(() => [])
