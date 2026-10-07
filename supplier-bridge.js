@@ -86,6 +86,14 @@
     document.documentElement.setAttribute("data-catalog-status", (online ? "online: " : "offline: ") + text);
   }
 
+
+  function webpImage(url) {
+    if (!url) return "";
+    const key = String(url).split("?")[0];
+    const map = window.NORDIC_WEBP_MAP || {};
+    return map[key] || map[url] || url;
+  }
+
   function curated(item, index, category, provider) {
     const nok = priceNok(item);
     const baseId = ID_BASE[provider] || 90001;
@@ -102,9 +110,9 @@
       base: nok > 0 ? nok / NOK_PER_EUR : 0,
       priceNok: nok,
       v: "v" + ((index % 4) + 1),
-      tag: LABELS[provider] || provider,
-      brand: item.brand || LABELS[provider] || provider,
-      image: item.image || "",
+      tag: item.category || item.cat || category || "",
+      brand: "",
+      image: webpImage(item.image || ""),
       sku: item.sku || "",
       supplier: item.supplier || LABELS[provider] || provider,
       provider: provider,
