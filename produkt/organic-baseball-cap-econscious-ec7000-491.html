@@ -39,7 +39,7 @@ h1{font-size:clamp(28px,4vw,42px);line-height:1.15;margin:0 0 12px}
 footer{margin:40px 0 20px;color:var(--muted);font-size:13px;font-family:system-ui,sans-serif}
 @media(max-width:800px){.grid{grid-template-columns:1fr}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Organic Baseball Cap | Econscious EC7000", "image": ["/media/0654cf8b0fbd533a.webp"], "sku": "PFL-491", "brand": {"@type": "Brand", "name": "Motrull"}, "offers": {"@type": "Offer", "url": "https://motrull.no/produkt/organic-baseball-cap-econscious-ec7000-491", "priceCurrency": "NOK", "price": 459, "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "79", "currency": "NOK"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 2, "unitCode": "d"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 20, "unitCode": "d"}}, "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "NO"}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "NO", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"}}, "category": "Econscious EC7000 | Baseball Hat"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Organic Baseball Cap | Econscious EC7000", "image": ["/media/0654cf8b0fbd533a.webp"], "sku": "PFL-491", "offers": {"@type": "Offer", "url": "https://motrull.no/produkt/organic-baseball-cap-econscious-ec7000-491", "priceCurrency": "NOK", "price": 459, "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "79", "currency": "NOK"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 2, "unitCode": "d"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 20, "unitCode": "d"}}, "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "NO"}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "NO", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"}}, "category": "Econscious EC7000 | Baseball Hat", "brand": {"@type": "Brand", "name": "Econscious"}}</script>
 </head>
 <body>
 <nav class="nav" aria-label="Hovedmeny">
@@ -62,38 +62,19 @@ footer{margin:40px 0 20px;color:var(--muted);font-size:13px;font-family:system-u
       <p class="price">459 kr</p>
       <div class="meta">
         <p>Pris i NOK inkl. 25 % mva.</p>
-        <p class="stock">På lager</p>
+        
         <p>Frakt: 79 kr til Norge · levering 5–20 virkedager.</p>
         <p>14 dagers angrerett.</p>
         <p>Kategori: Econscious EC7000 | Baseball Hat</p>
       </div>
-      <button class="btn" type="button" id="addCart" data-id="491" data-name="Organic Baseball Cap | Econscious EC7000" data-price="459" data-image="/media/0654cf8b0fbd533a.webp" data-sku="PFL-491">Legg i handlekurv</button>
+      <a class="btn" id="addCart" href="/?add=491">Legg i handlekurv</a>
       <div class="note">
-        <p>Selger: Motrull (Martinez Lozano Internasjonal Handel, org.nr 935 407 095 MVA).</p>
-        <p>Du betaler trygt via Stripe Checkout. Totalpris inkl. frakt vises før betaling.</p>
+        <p>Selger: Motrull (Martinez Lozano Internasjonal Handel, org.nr 935 407 095 MVA).</p><p>Du betaler trygt via Stripe Checkout. Totalpris inkl. frakt vises før betaling.</p>
         <p><a href="/angrerett">Angrerett</a> · <a href="/frakt-og-levering">Frakt og levering</a> · <a href="/kjopsvilkar">Kjøpsvilkår</a></p>
       </div>
     </section>
   </div>
 </main>
 <footer class="wrap"><p>© 2026 Motrull</p></footer>
-<script>
-(function(){
-  const btn=document.getElementById('addCart');
-  if(!btn) return;
-  const store=(document.title||'Motrull').replace(/[^a-z0-9]+/gi,'-').toLowerCase();
-  const key='nordic-cart:'+store;
-  btn.addEventListener('click', function(){
-    let cart={};
-    try{ cart=JSON.parse(localStorage.getItem(key)||'{}')||{}; }catch(e){}
-    const id=String(btn.getAttribute('data-id')||'');
-    if(!id) return;
-    cart[id]=Math.min(99,(Number(cart[id])||0)+1);
-    try{ localStorage.setItem(key, JSON.stringify(cart)); }catch(e){}
-    btn.textContent='Lagt i handlekurven';
-    setTimeout(function(){ window.location.href='/?cart=1'; }, 350);
-  });
-})();
-</script>
 </body>
 </html>

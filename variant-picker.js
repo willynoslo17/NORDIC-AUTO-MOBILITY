@@ -263,9 +263,47 @@
     });
   }
 
-  function start() { watchCart(); refresh(); }
+
+  /* Deep-link from static /produkt pages: /?add=<uiId> opens variant picker / adds to cart. */
+  function nordicHandleAddQuery() {
+    const params = new URLSearchParams(location.search);
+    const addId = params.get("add");
+    if (!addId) return;
+    let tries = 0;
+    const run = () => {
+      tries++;
+      const parent = parentById(addId);
+      if (parent && parent.quote) {
+        choose(parent, { mode: "add" });
+        history.replaceState({}, "", location.pathname);
+        return;
+      }
+      /* Non-CJ / already in grid products[] or data[] */
+      const list = (typeof products !== "undefined" && Array.isArray(products)) ? products
+        : (typeof data !== "undefined" && Array.isArray(data)) ? data.map(x => ({ id: x.id, name: x.n, base: x.p }))
+        : [];
+      const hit = list.find(item => String(item.id) === String(addId));
+      if (hit) {
+        nativeAdd(hit.id);
+        if (typeof openCart === "function") openCart();
+        else {
+          const d = document.getElementById("drawer");
+          if (d) d.classList.add("open");
+        }
+        history.replaceState({}, "", location.pathname);
+        return;
+      }
+      if (tries < 40) setTimeout(run, 250);
+    };
+    run();
+  }
+  window.nordicHandleAddQuery = nordicHandleAddQuery;
+
+  function start() { watchCart(); refresh(); setTimeout(nordicHandleAddQuery, 0); }
   if (window.nordicCatalogReady) setTimeout(start, 0);
   else window.addEventListener("nordic:catalog-ready", () => setTimeout(start, 50), { once: true });
   window.addEventListener("nordic:catalog-updated", watchCart);
+  window.addEventListener("nordic:catalog-complete", () => setTimeout(nordicHandleAddQuery, 0));
+  window.addEventListener("nordic:catalog-ready", () => setTimeout(nordicHandleAddQuery, 100), { once: true });
   if (document.readyState !== "loading") watchCart(); else document.addEventListener("DOMContentLoaded", watchCart);
 })();

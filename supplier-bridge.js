@@ -87,6 +87,14 @@
     } catch (_) {}
   }
 
+
+  const THIRD_PARTY_HAT_BRANDS = /\b(adidas|otto\s*cap|otto\b|yupoong|flexfit|as\s*colour|comfort\s*colors?|beechfield|newhattan)\b/i;
+  const HAT_WORDS = /\b(hat|hats|cap|caps|beanie|beanies|snapback|trucker|bucket|dad\s*hat|visor)\b/i;
+  function isBlockedThirdPartyHat(item) {
+    const text = [item && item.name, item && item.brand, item && item.supplier, item && item.category, item && item.cat].join(" ");
+    return THIRD_PARTY_HAT_BRANDS.test(text) && HAT_WORDS.test(text);
+  }
+
   window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
   window.nordicActiveSupplier = "cj";
 
@@ -114,6 +122,7 @@
   }
 
   function curated(item, index, category, provider) {
+    if (isBlockedThirdPartyHat(item)) return { id: 0, base: 0, image: "", name: "" };
     const nok = priceNok(item);
     const baseId = ID_BASE[provider] || 90001;
     const rawId = item.id != null ? String(item.id) : "";
@@ -286,7 +295,7 @@
 
   /* Storefront rule (owner, 2026-10-02): every product that has an image is shown. */
   function storefrontItem() {
-    return item => Boolean(item && item.image);
+    return item => Boolean(item && item.image && !isBlockedThirdPartyHat(item));
   }
 
   /** One grid with every supplier (fixed order); only the very same product (supplier + id) is listed once. */
@@ -365,6 +374,14 @@
     try {
       localStorage.setItem(NORDIC_CJ_CACHE_KEY, JSON.stringify({ at: Date.now(), products: products.slice(0, 600) }));
     } catch (_) {}
+  }
+
+
+  const THIRD_PARTY_HAT_BRANDS = /\b(adidas|otto\s*cap|otto\b|yupoong|flexfit|as\s*colour|comfort\s*colors?|beechfield|newhattan)\b/i;
+  const HAT_WORDS = /\b(hat|hats|cap|caps|beanie|beanies|snapback|trucker|bucket|dad\s*hat|visor)\b/i;
+  function isBlockedThirdPartyHat(item) {
+    const text = [item && item.name, item && item.brand, item && item.supplier, item && item.category, item && item.cat].join(" ");
+    return THIRD_PARTY_HAT_BRANDS.test(text) && HAT_WORDS.test(text);
   }
 
   window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };

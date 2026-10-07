@@ -7,7 +7,7 @@ import { verifyQuote, SUPPLIER_ID_FIELDS, type SupplierIds } from "../_shared/qu
 import { costUsd, retailNokFromCost, marketUnitAmount } from "../_shared/pricing";
 import { resolveCjVariant } from "../_shared/cj";
 
-type Env = { STRIPE_SECRET_KEY?: string; CJ_API_KEY?: string };
+type Env = { STRIPE_SECRET_KEY?: string; CJ_API_KEY?: string; CF_PAGES_BRANCH?: string };
 /** Browser cart line. Prices are never read from here, only identifiers and the server-signed quote. */
 type CartItem = { id?: string | number; ref?: string; sku?: string; provider?: string; quantity?: number; quote?: string };
 type CheckoutPayload = {
@@ -145,9 +145,15 @@ function json(error: string, status: number, extra: Record<string, unknown> = {}
 
 export async function onRequestPost(context: { request: Request; env: Env }) {
   const stripeKey = context.env.STRIPE_SECRET_KEY || "";
-  // Accept Stripe test (sk_test_) or live (sk_live_) keys. Test mode never charges real cards.
-  if (!stripeKey.startsWith("sk_live_") && !stripeKey.startsWith("sk_test_")) {
-    return json("Payments are not configured", 503);
+  const branch = String(context.env.CF_PAGES_BRANCH || "");
+  const isPreview = Boolean(branch) && branch !== "main";
+  // Production (main): only sk_live_. Preview branches may use sk_test_ (no real charges).
+  if (isPreview) {
+    if (!stripeKey.startsWith("sk_live_") && !stripeKey.startsWith("sk_test_")) {
+      return json("Payments are not configured", 503);
+    }
+  } else if (!stripeKey.startsWith("sk_live_")) {
+    return json("Live payments are not configured", 503);
   }
 
   let body: CheckoutPayload;
