@@ -61,11 +61,22 @@ renderFilters();renderProducts();renderCart();
 
 </script>
 <script src="/media/webp-map.js" defer></script>
+<script src="produkt-links.js" defer></script>
 <script src="supplier-bridge.js"></script>
 <script>loadNordicCatalog({query:"car accessories",category:"Bilutstyr"});</script>
 <script src="variant-picker.js" defer></script>
 <script src="commerce-runtime.js" defer></script>
 <script src="newsletter.js" defer></script>
 
+<script>
+if(/[?&]cart=1(?:&|$)/.test(location.search)){
+  document.addEventListener('DOMContentLoaded',function(){
+    setTimeout(function(){
+      var b=document.getElementById('cartOpen')||document.getElementById('cartBtn');
+      if(b) b.click();
+    }, 600);
+  });
+}
+</script>
 </body>
 </html>

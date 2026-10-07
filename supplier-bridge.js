@@ -32,7 +32,8 @@
     return POD_QUERY_ALIAS[key] || key;
   }
   const LOCAL_FILES = {
-    cj: "catalog/selected-products.json",
+    cj: "catalog/cj-cache.json",
+    cjFallback: "catalog/selected-products.json",
     printify: "catalog/printify-selected.json",
     printifyFallback: "catalog/printify-products.json",
     gelato: "catalog/gelato-products.json",
@@ -41,7 +42,7 @@
   const ID_BASE = { cj: 10001, printify: 20001, gelato: 30001, printful: 40001 };
   const LABELS = { cj: "CJ", printify: "Printify", gelato: "Gelato", printful: "Printful" };
   /** A slow supplier endpoint never blocks the grid: after this many ms its local fallback is used instead. */
-  const SOURCE_TIMEOUT_MS = 8000;
+  const SOURCE_TIMEOUT_MS = 60000;
   /** Gelato (live prices from the Gelato API) loads in the background and may take longer; it never delays readiness. */
   const BACKGROUND_TIMEOUT_MS = 30000;
   const BACKGROUND_SOURCES = ["gelato"];
@@ -67,6 +68,24 @@
     gelato: "#ea580c",
     printful: "#2563eb"
   };
+
+
+  const NORDIC_CJ_CACHE_KEY = "nordic-cj-cache:v1:" + (location.host || "store");
+  function readCjBrowserCache() {
+    try {
+      const raw = localStorage.getItem(NORDIC_CJ_CACHE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || !Array.isArray(parsed.products) || !parsed.products.length) return null;
+      if (Date.now() - Number(parsed.at || 0) > 7 * 24 * 3600 * 1000) return null;
+      return parsed.products;
+    } catch (_) { return null; }
+  }
+  function writeCjBrowserCache(products) {
+    try {
+      localStorage.setItem(NORDIC_CJ_CACHE_KEY, JSON.stringify({ at: Date.now(), products: products.slice(0, 600) }));
+    } catch (_) {}
+  }
 
   window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
   window.nordicActiveSupplier = "cj";
@@ -169,29 +188,34 @@
 
   async function loadCjSelected(config) {
     const allowed = cjAllowed(config);
+    const mapRows = (rows) => rows
+      .filter(allowed)
+      .map((item, index) => curated({ ...item, brand: "", supplier: item.supplier || "" }, index, config.category, "cj"))
+      .filter(item => item.base > 0)
+      .slice(0, 600);
+    const cached = readCjBrowserCache();
     const timeout = new AbortController();
     const timer = setTimeout(() => timeout.abort(), SOURCE_TIMEOUT_MS);
     try {
       const url = ENDPOINTS.cj + "?q=" + encodeURIComponent(config.query || "");
-      const response = await fetch(url, { signal: timeout.signal, cache: "no-store" });
+      const response = await fetch(url, { signal: timeout.signal, cache: "default" });
       if (response.ok) {
         const payload = await response.json();
         if (Array.isArray(payload.products) && payload.products.length) {
-          return payload.products
-            .filter(allowed)
-            .map((item, index) => curated({ ...item, brand: item.brand || "CJ Dropshipping", supplier: item.supplier || "CJ Dropshipping" }, index, config.category, "cj"))
-            .filter(item => item.base > 0)
-            .slice(0, 600); // curated set (150) + trend winners
+          writeCjBrowserCache(payload.products);
+          return mapRows(payload.products);
         }
       }
     } catch (_) {
-      /* fall through to local */
+      /* fall through to caches */
     } finally {
       clearTimeout(timer);
     }
-    if (config.cjLocalFallback === false) return []; // store sells CJ winners only (no generic local fallback)
-    const localItems = await loadJson(LOCAL_FILES.cj);
-    return localItems.filter(allowed).map((item, index) => curated(item, index, config.category, "cj")).filter(item => item.base > 0).slice(0, 150);
+    if (cached && cached.length) return mapRows(cached);
+    if (config.cjLocalFallback === false) return [];
+    let localItems = await loadJson(LOCAL_FILES.cj);
+    if (!localItems.length && LOCAL_FILES.cjFallback) localItems = await loadJson(LOCAL_FILES.cjFallback);
+    return mapRows(localItems).slice(0, 400);
   }
 
   async function loadPodCatalog(provider, category, query) {
@@ -325,7 +349,25 @@
       gelato: loadPodCatalog("gelato", category, query),
       printful: loadPodCatalog("printful", category, query)
     };
-    window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
+  
+  const NORDIC_CJ_CACHE_KEY = "nordic-cj-cache:v1:" + (location.host || "store");
+  function readCjBrowserCache() {
+    try {
+      const raw = localStorage.getItem(NORDIC_CJ_CACHE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || !Array.isArray(parsed.products) || !parsed.products.length) return null;
+      if (Date.now() - Number(parsed.at || 0) > 7 * 24 * 3600 * 1000) return null;
+      return parsed.products;
+    } catch (_) { return null; }
+  }
+  function writeCjBrowserCache(products) {
+    try {
+      localStorage.setItem(NORDIC_CJ_CACHE_KEY, JSON.stringify({ at: Date.now(), products: products.slice(0, 600) }));
+    } catch (_) {}
+  }
+
+  window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
     /* Render each supplier as soon as it answers (or falls back after its timeout). */
     const settle = key => loaders[key]
       .catch(() => [])
