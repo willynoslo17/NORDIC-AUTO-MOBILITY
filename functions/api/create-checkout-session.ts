@@ -144,8 +144,10 @@ function json(error: string, status: number, extra: Record<string, unknown> = {}
 }
 
 export async function onRequestPost(context: { request: Request; env: Env }) {
-  if (!context.env.STRIPE_SECRET_KEY?.startsWith("sk_live_")) {
-    return json("Live payments are not configured", 503);
+  const stripeKey = context.env.STRIPE_SECRET_KEY || "";
+  // Accept Stripe test (sk_test_) or live (sk_live_) keys. Test mode never charges real cards.
+  if (!stripeKey.startsWith("sk_live_") && !stripeKey.startsWith("sk_test_")) {
+    return json("Payments are not configured", 503);
   }
 
   let body: CheckoutPayload;
