@@ -39,7 +39,8 @@
     printful: "catalog/printful-products.json"
   };
   const ID_BASE = { cj: 10001, printify: 20001, gelato: 30001, printful: 40001 };
-  const LABELS = { cj: "CJ", printify: "Printify", gelato: "Gelato", printful: "Printful" };
+  /* Internal source keys only — never shown on the storefront. */
+  const LABELS = { cj: "cj", printify: "printify", gelato: "gelato", printful: "printful" };
   /** A slow supplier endpoint never blocks the grid: after this many ms its local fallback is used instead. */
   const SOURCE_TIMEOUT_MS = 8000;
   /** Gelato (live prices from the Gelato API) loads in the background and may take longer; it never delays readiness. */
@@ -59,14 +60,54 @@
     "stationery": "Papirvarer",
     "accessories": "Tilbehør",
     "home": "Hjem",
-    "phone-cases": "Mobildeksler"
+    "phone-cases": "Mobildeksler",
+    "auto & mobility": "Bilutstyr",
+    "car accessories": "Bilutstyr",
+    "bilutstyr": "Bilutstyr"
   };
   const BRAND_COLORS = {
-    cj: "#0f766e",
-    printify: "#7c3aed",
-    gelato: "#ea580c",
-    printful: "#2563eb"
+    cj: "#2a4550",
+    printify: "#2a4550",
+    gelato: "#2a4550",
+    printful: "#2a4550"
   };
+  /** English → Norwegian title cleanup for leftover EN product titles. */
+  const NAME_NB_RULES = [
+    [/organic cotton tote/i, "Handlenett i økologisk bomull"],
+    [/wheel logo mug/i, "Krus med hjul-logo"],
+    [/wheel pattern mug/i, "Krus med hjulmønster"],
+    [/wheel art poster/i, "Hjulkunst-plakat"],
+    [/dot-?grid notebook/i, "Prikkgrid-notatbok"],
+    [/vinyl sticker/i, "Vinylklistremerke"],
+    [/mouse pad/i, "Musematte"],
+    [/hoodie/i, "Hettegenser"],
+    [/\btee\b|t-?shirt/i, "T-skjorte"],
+    [/poster/i, "Plakat"],
+    [/\bmug\b/i, "Krus"],
+    [/car phone holder|phone holder.*car|air outlet phone/i, "Mobilholder til bil"],
+    [/inflatable.*(mattress|bed)|car mattress/i, "Oppblåsbar bilmadrass"],
+    [/armrest/i, "Armlenepute til bil"],
+    [/sun visor/i, "Solskjermtilbehør"],
+    [/air (outlet|vent).*(perfume|fragrance|aroma)|aromatherapy|car fragrance|perfume.*car/i, "Bilduft"],
+    [/seat (gap|crevice)|gap filler/i, "Spaltefyller til bilsete"],
+    [/microfiber/i, "Mikrofiberhåndkle til bil"],
+    [/neck pillow/i, "Nakkepute til bil"],
+    [/car accessories|auto & mobility/i, "Biltilbehør"]
+  ];
+  function toNorwegianName(raw, fallbackCat) {
+    const name = String(raw || "").trim();
+    if (!name) return fallbackCat || "Produkt";
+    if (/[æøåÆØÅ]/.test(name) || /^(Motrull|Mobilholder|Spaltefyller|Mikrofiber|Frontrute|Setetrekk|Børste|Oppblåsbar|Bilduft|Armlene|Solskjerm|Interiør|Duftklips|Oljeelement|LED-|Hundepynt|Smart |Rød |C-formet|Lærbeskyttet|Sikkerhet|Metallpynt|Grise|Retro |Helikopter|Brille|Søt |Dekor|Fjær|Aroma)/i.test(name)) {
+      return name.replace(/\b(CJ|Printify|Printful|Gelato|Dropshipping)\b/gi, "").replace(/\s{2,}/g, " ").trim() || fallbackCat || "Produkt";
+    }
+    for (const [rx, nb] of NAME_NB_RULES) {
+      if (rx.test(name)) {
+        const brand = /\bMotrull\b/i.test(name) ? "Motrull " : "";
+        return (brand + nb).trim();
+      }
+    }
+    return name.replace(/\b(CJ|Printify|Printful|Gelato|Dropshipping)\b/gi, "").replace(/\s{2,}/g, " ").trim() || fallbackCat || "Produkt";
+  }
 
   window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
   window.nordicActiveSupplier = "cj";
@@ -94,21 +135,23 @@
        the UI uses their last 15 digits and the full id stays a string in externalId / cjPid. */
     const tail = /^\d+$/.test(rawId) ? (Number.isSafeInteger(Number(rawId)) ? Number(rawId) : Number(rawId.slice(-15))) : 0;
     const numericId = tail > 0 ? tail : null;
+    const catSeed = item.category || item.cat || category;
+    const displayName = toNorwegianName(item.name || item.nameEn || "", catSeed);
     const out = {
       id: numericId != null ? numericId : baseId + index,
       externalId: String(item.id || item.gelatoProductUid || item.printfulProductId || item.printifyProductId || ""),
-      name: item.name || (LABELS[provider] || "Supplier") + " product",
-      cat: item.category || item.cat || category,
+      name: displayName,
+      cat: catSeed,
       base: nok > 0 ? nok / NOK_PER_EUR : 0,
       priceNok: nok,
       v: "v" + ((index % 4) + 1),
-      tag: LABELS[provider] || provider,
-      brand: item.brand || LABELS[provider] || provider,
+      tag: "", /* filled with Norwegian category in loadNordicCatalog */
+      brand: "Motrull",
       image: item.image || "",
       sku: item.sku || "",
-      supplier: item.supplier || LABELS[provider] || provider,
+      supplier: provider, /* internal routing key only; never rendered in UI */
       provider: provider,
-      badgeColor: BRAND_COLORS[provider] || "#334155"
+      badgeColor: BRAND_COLORS[provider] || "#2a4550"
     };
     if (item.printifyProductId) out.printifyProductId = item.printifyProductId;
     if (item.printifyVariantId) out.printifyVariantId = item.printifyVariantId;
@@ -171,7 +214,7 @@
         if (Array.isArray(payload.products) && payload.products.length) {
           return payload.products
             .filter(allowed)
-            .map((item, index) => curated({ ...item, brand: item.brand || "CJ Dropshipping", supplier: item.supplier || "CJ Dropshipping" }, index, config.category, "cj"))
+            .map((item, index) => curated({ ...item, brand: "Motrull", supplier: "cj" }, index, config.category, "cj"))
             .filter(item => item.base > 0)
             .slice(0, 600); // curated set (150) + trend winners
         }
