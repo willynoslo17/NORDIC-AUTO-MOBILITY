@@ -95,6 +95,10 @@
        the UI uses their last 15 digits and the full id stays a string in externalId / cjPid. */
     const tail = /^\d+$/.test(rawId) ? (Number.isSafeInteger(Number(rawId)) ? Number(rawId) : Number(rawId.slice(-15))) : 0;
     const numericId = tail > 0 ? tail : null;
+    const listedNum = Number(item.listedNum) || 0;
+    const compareNok = Number(item.compareAtNok || item.compareAt || 0);
+    const compareAt = compareNok > nok ? (compareNok / NOK_PER_EUR) : 0;
+    const discountPercent = compareAt > 0 ? Math.round((1 - (nok / NOK_PER_EUR) / compareAt) * 100) : (Number(item.discountPercent) || 0);
     const out = {
       id: numericId != null ? numericId : baseId + index,
       externalId: String(item.id || item.gelatoProductUid || item.printfulProductId || item.printifyProductId || ""),
@@ -102,6 +106,10 @@
       cat: item.category || item.cat || category,
       base: nok > 0 ? nok / NOK_PER_EUR : 0,
       priceNok: nok,
+      listedNum: listedNum,
+      isNew: item.isNew === true || listedNum === 0 || listedNum < 60,
+      compareAt: compareAt,
+      discountPercent: discountPercent >= 5 && discountPercent <= 70 ? discountPercent : 0,
       v: "v" + ((index % 4) + 1),
       tag: LABELS[provider] || provider,
       brand: item.brand || LABELS[provider] || provider,

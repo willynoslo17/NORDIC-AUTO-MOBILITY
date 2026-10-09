@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://motrull.no/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/pe/</loc>
@@ -30,82 +30,62 @@
   </url>
   <url>
     <loc>https://motrull.no/kjopsvilkar</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/angrerett</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/angreskjema</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/personvern</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/cookies</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/frakt-og-levering</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/reklamasjon</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/garanti-og-reklamasjon</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/slik-handler-du</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/om-oss</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/kontakt</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/faq</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/blog/</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://motrull.no/blog/como-comprobar-si-un-accesorio-sirve-para-tu-auto</loc>
-    <lastmod>2026-10-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="nb" href="https://motrull.no/blog/hvordan-sjekke-at-biltilbehoret-passer-bilen-din"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motrull.no/blog/como-comprobar-si-un-accesorio-sirve-para-tu-auto"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motrull.no/blog/hvordan-sjekke-at-biltilbehoret-passer-bilen-din"/>
-  </url>
-  <url>
-    <loc>https://motrull.no/blog/como-organizar-accesorios-utiles-en-el-auto</loc>
-    <lastmod>2026-10-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="nb" href="https://motrull.no/blog/hvordan-organisere-nyttig-tilbehor-i-bilen"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motrull.no/blog/como-organizar-accesorios-utiles-en-el-auto"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motrull.no/blog/hvordan-organisere-nyttig-tilbehor-i-bilen"/>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/blog/hvordan-organisere-nyttig-tilbehor-i-bilen</loc>
-    <lastmod>2026-10-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="nb" href="https://motrull.no/blog/hvordan-organisere-nyttig-tilbehor-i-bilen"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motrull.no/blog/como-organizar-accesorios-utiles-en-el-auto"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motrull.no/blog/hvordan-organisere-nyttig-tilbehor-i-bilen"/>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://motrull.no/blog/hvordan-sjekke-at-biltilbehoret-passer-bilen-din</loc>
-    <lastmod>2026-10-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="nb" href="https://motrull.no/blog/hvordan-sjekke-at-biltilbehoret-passer-bilen-din"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://motrull.no/blog/como-comprobar-si-un-accesorio-sirve-para-tu-auto"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motrull.no/blog/hvordan-sjekke-at-biltilbehoret-passer-bilen-din"/>
+    <lastmod>2026-10-09</lastmod>
   </url>
 </urlset>
