@@ -1,6 +1,6 @@
 {
   "onlyWinners": true,
-  "note": "Trend-researched CJ winners (2026-10-02). keywords = CJ search words; pids = vetted products shown on the storefront (after the live curated set). Name, image and cost come live from CJ; price rule in functions/_shared/pricing.ts.",
+  "note": "Trend-researched CJ winners (2026-10-02, moto/auto top-up 2026-10-09). keywords = CJ search words; pids = vetted products shown on the storefront. Name, image and cost from server snapshot when CJ is unavailable; price rule in functions/_shared/pricing.ts. onlyWinners remains true.",
   "keywords": [
     "ice scraper",
     "snow brush car",
@@ -31,7 +31,13 @@
     "car air vent clip",
     "car seat protector",
     "car cover",
-    "car organizer"
+    "car organizer",
+    "motorcycle accessories",
+    "motorcycle handle grip",
+    "motorcycle mirror",
+    "motorcycle pedal",
+    "moto grip",
+    "scooter accessories"
   ],
   "pids": [
     "1386925350814093312",
@@ -95,12 +101,32 @@
     "1418761693210742784",
     "1363384151255945216",
     "1418816673884016640",
-    "2B93EE54-013F-4952-AC76-F17065AF6CC0"
+    "2B93EE54-013F-4952-AC76-F17065AF6CC0",
+    "1447910396492124160",
+    "1461295206933598208",
+    "1440922717556707328",
+    "E8C6CC5B-6870-4A86-95C7-C544259CA06C",
+    "1382927992921133056",
+    "1443135703599943680",
+    "992A4F82-5A1E-4C7A-AAEB-A6796BD6688D",
+    "F540EB1A-3DE5-4A8B-821B-9C94275CAEF5",
+    "1468515892672466944",
+    "1549677724544421888",
+    "1514193301698785280",
+    "2507050211141628800",
+    "1590664411046490112",
+    "A396BF6E-140D-49B2-A36B-6F5EF43D18CF",
+    "1365487142511448064",
+    "1473299195782893568",
+    "1634593229494562816",
+    "20656A2D-FB3F-44DB-BD0D-ACCB3DA13A76",
+    "1646729003237122048",
+    "92388C83-2A19-4717-9663-B57B36AABAC2"
   ],
   "minUsd": 3.5,
-  "maxUsd": 33.3,
-  "include": "\\b(car|cars|auto|automotive|vehicle|truck|suv|windshield|steering|dashboard|seat|trunk|tire|tyre|wiper)\\b",
-  "exclude": "\\b(usb|electric\\w*|rechargeable|led|leds|smart|automatic|wireless|battery|batteries|charging|charger|bluetooth|gps|camera|fountain|ultrasonic|laser|lamp|lights?|light-up|luminous|glowing|heated|heating|heater|fan|vacuum|inflator|power bank|speaker|sensor|solar|digital|display|remote|motor|timer|humidifier|diffuser|projector|clock|plug|socket|volt|12v|24v)\\b|\\b(dash ?cam|fm|transmitter|jump starter|hud|radio|purifier|toy|toys|kids? car|ride on|motorcycle|bike|bicycle|scooter|pets?|dogs?|cats?|perfume|fragrance|engine|brake|headlight|bulb|xenon|exhaust)\\b",
+  "maxUsd": 35,
+  "include": "\\b(car|cars|auto|automotive|vehicle|truck|suv|windshield|steering|dashboard|seat|trunk|tire|tyre|wiper|motorcycle|moto|scooter)\\b",
+  "exclude": "\\b(usb|electric\\w*|rechargeable|smart|automatic|wireless|battery|batteries|charging|charger|bluetooth|gps|camera|fountain|ultrasonic|laser|heated|heating|heater|fan|vacuum|inflator|power bank|speaker|sensor|solar|digital|display|remote|timer|humidifier|diffuser|projector|clock|plug|socket|volt|12v|24v)\\b|\\b(dash ?cam|fm|transmitter|jump starter|hud|radio|purifier|toy|toys|kids? car|ride on|bicycle|pets?|dogs?|cats?|engine|brake|headlight|bulb|xenon|exhaust)\\b",
   "products": [
     {
       "id": "1386925350814093312",
@@ -721,6 +747,206 @@
       "image": "https://cf.cjdropshipping.com/2054/767478287525.jpg",
       "supplierPriceMaxUsd": 6.2593,
       "keyword": "car phone holder"
+    },
+    {
+      "id": "1447910396492124160",
+      "sku": "CJQT1316717",
+      "name": "Gummihåndtak til motorsykkelstyre",
+      "nameEn": "Applicable Motorcycle Accessories Car Handle Rubber Handle Cover",
+      "category": "Motorsykkel",
+      "image": "https://cf.cjdropshipping.com/e0f5590b-be5a-425f-b365-a62277290a0c.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "motorcycle handle grip"
+    },
+    {
+      "id": "1461295206933598208",
+      "sku": "CJQT1355447",
+      "name": "Speil til motorsykkel",
+      "nameEn": "Rear View Accessories Motorcycle Modified Car Mirror",
+      "category": "Motorsykkel",
+      "image": "https://cf.cjdropshipping.com/6c65c728-57fe-48b4-8f5d-9515078baf9c.jpg",
+      "supplierPriceMaxUsd": 8.1112,
+      "keyword": "motorcycle mirror"
+    },
+    {
+      "id": "1440922717556707328",
+      "sku": "CJQT1296570",
+      "name": "Fotstøtte / pedal til motorsykkel",
+      "nameEn": "Aluminium Alloy Car And Motorcycle Accessories Pedal Lever C90GS Pedal",
+      "category": "Motorsykkel",
+      "image": "https://cf.cjdropshipping.com/9715cfb7-69f1-471b-aa3f-c7fb03f86233.jpg",
+      "supplierPriceMaxUsd": 12.5556,
+      "keyword": "motorcycle pedal"
+    },
+    {
+      "id": "E8C6CC5B-6870-4A86-95C7-C544259CA06C",
+      "sku": "CJQCQCQT00264",
+      "name": "Tilbehør til motorsykkel og elscooter",
+      "nameEn": "Motorcycle electric car accessories",
+      "category": "Motorsykkel",
+      "image": "https://cf.cjdropshipping.com/20200924/1190500447574.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "motorcycle accessories"
+    },
+    {
+      "id": "1382927992921133056",
+      "sku": "CJQT1082623",
+      "name": "Dekorasjon til midtkonsoll i bil / motorsykkelmotiv",
+      "nameEn": "Car Ornaments Motorcycle Cute Car Center Console Accessories Car Cartoon",
+      "category": "Motorsykkel",
+      "image": "https://cf.cjdropshipping.com/1618549679984.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car ornaments motorcycle"
+    },
+    {
+      "id": "1443135703599943680",
+      "sku": "CJQC1303658",
+      "name": "Oppbevaringsveske til seterygg med brettbar brett",
+      "nameEn": "Car Seat Back Storage Bag Car Organizer Bag Foldable Dining Table Tray Travel Storage Bag Car Interior Accessories",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/f7c05242-bcc2-40d5-af7a-3bd672c9b777.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car seat back organizer"
+    },
+    {
+      "id": "992A4F82-5A1E-4C7A-AAEB-A6796BD6688D",
+      "sku": "CJQCNBQC00222",
+      "name": "Putetrekk til armlenet i bilen",
+      "nameEn": "Car accessories armrest box pad",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/20200630/1857586704270.jpg?cid=2604021210461933802",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car armrest cushion"
+    },
+    {
+      "id": "F540EB1A-3DE5-4A8B-821B-9C94275CAEF5",
+      "sku": "CJQCQCQC02233",
+      "name": "Klemme til solskjerm i bilen",
+      "nameEn": "Car Sun Visor Clip Car Accessories",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/2062/2221761150776.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car sun shade"
+    },
+    {
+      "id": "1468515892672466944",
+      "sku": "CJQC1375280",
+      "name": "Antiskli-matte til dashbordet for mobil",
+      "nameEn": "Car Accessories Dashboard Mobile Phone Bracket Anti-slip Mat",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/eb0746ee-b58a-4603-a058-bfb9749a7cfe.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "dashboard mat"
+    },
+    {
+      "id": "1549677724544421888",
+      "sku": "CJQC1528710",
+      "name": "Oppbevaringslomme til luftdyse",
+      "nameEn": "Car Accessories Air Outlet Storage Bag",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/ac87fa46-fba0-4f8b-9489-f000116b79dd.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car air vent clip"
+    },
+    {
+      "id": "1514193301698785280",
+      "sku": "CJQC1462512",
+      "name": "Multilomme til luftdyse i bilen",
+      "nameEn": "Accessories Air Outlet Multi-function Car Storage Bag",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/9e88f809-72ad-434d-b352-a4b22187fe7a.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car organizer"
+    },
+    {
+      "id": "2507050211141628800",
+      "sku": "CJYD2421252",
+      "name": "Brilleholder i lær til bilen",
+      "nameEn": "Leather Car Accessories Car Glasses Frame",
+      "category": "Bilutstyr",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/07/05/02/6a8a7ec3-327f-4564-96bd-3936d2c5850b_trans.jpeg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car organizer"
+    },
+    {
+      "id": "1590664411046490112",
+      "sku": "CJQC1609541",
+      "name": "Holder til duft / parfyme i luftdysen",
+      "nameEn": "Car Mounted Perfume Accessories Air Conditioner Air Outlet Perfume Accessories",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/e28e9718-181a-4ef4-bd1e-5532994f5d05.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car air vent clip"
+    },
+    {
+      "id": "A396BF6E-140D-49B2-A36B-6F5EF43D18CF",
+      "sku": "CJQCWBQC00123",
+      "name": "Dekorstripe til billys (akryl)",
+      "nameEn": "Car light decoration stickers modified accessories acrylic decoration",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/20200706/529965312802.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car accessories"
+    },
+    {
+      "id": "1365487142511448064",
+      "sku": "CJQC1022963",
+      "name": "Retro kattefigur til bilinteriør",
+      "nameEn": "Retro Cute Kitten Car Ornaments Accessories",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/1614392409596.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car accessories"
+    },
+    {
+      "id": "1473299195782893568",
+      "sku": "CJQT1385259",
+      "name": "Søt grisefigur til bilinteriør",
+      "nameEn": "Car Accessories Piggy Creative Cartoon Cute Car Decoration",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/83f0d543-1e51-4d23-b862-7d4dc9cd1cc7.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car accessories"
+    },
+    {
+      "id": "1634593229494562816",
+      "sku": "CJQC1703890",
+      "name": "Cartoon-gris dekorasjon til bil",
+      "nameEn": "Cute Cartoon Pig Car Accessories",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/38d177d6-71a1-43df-8f5d-0e7541e28ff9.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car accessories"
+    },
+    {
+      "id": "20656A2D-FB3F-44DB-BD0D-ACCB3DA13A76",
+      "sku": "CJQCQCQC02124",
+      "name": "Fjærpynt til bil (hengende)",
+      "nameEn": "Creative feather car pendant safety car accessories",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/203209/1177839239087.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car accessories"
+    },
+    {
+      "id": "1646729003237122048",
+      "sku": "CJQC1734065",
+      "name": "Bilparfyme / duftpynt",
+      "nameEn": "Perfume Car Fragrance Accessories Decorate",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/bcd6f9af-389b-41e0-b7c9-50420da22969.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car accessories"
+    },
+    {
+      "id": "92388C83-2A19-4717-9663-B57B36AABAC2",
+      "sku": "CJQCQCQC01516",
+      "name": "Blank list / dekorlist til bil",
+      "nameEn": "Bright bar car accessories",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/2053/4381791721027.jpg",
+      "supplierPriceMaxUsd": 3.6667,
+      "keyword": "car accessories"
     }
   ]
 }

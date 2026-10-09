@@ -80,6 +80,11 @@ let winnersJson;
 try {
   winnersJson = JSON.parse(winners);
   assert(winnersJson.onlyWinners === true, "cj-winners.json onlyWinners remains true");
+  assert(Array.isArray(winnersJson.pids) && winnersJson.pids.length >= 70, "cj-winners has expanded vetted pids");
+  assert(Array.isArray(winnersJson.products) && winnersJson.products.length === winnersJson.pids.length, "every winner pid has a snapshot product");
+  const blob = JSON.stringify(winnersJson).toLowerCase();
+  assert(blob.includes("motorcycle") || blob.includes("moto"), "cj-winners includes moto products/keywords");
+  assert(!blob.includes("cj_api_key") && !blob.includes("sk_live"), "winners file has no secrets");
 } catch (e) {
   fail.push("cj-winners.json parse: " + e.message);
 }
