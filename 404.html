@@ -11,49 +11,44 @@
 <meta name="twitter:image" content="https://motrull.no/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <title>Siden finnes ikke — Motrull</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f4efe6;--ink:#1c1915;--muted:#5c564c;--line:#d9d1c3;--accent:#8a4e0b;--on-accent:#fff8f3}
+:root{--graphite:#1C1F23;--signal:#FF6A13;--steel:#8A939B;--snow:#F5F6F7;--line:#2E343B}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--paper);color:var(--ink)}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem 1.25rem}
+html,body{margin:0;background:var(--graphite);color:var(--snow)}
+body{
+  font-family:Inter,sans-serif;line-height:1.55;min-height:100vh;
+  display:flex;align-items:center;justify-content:center;padding:2rem 1.25rem;
+  background-image:radial-gradient(ellipse 70% 50% at 80% 20%,rgba(255,106,19,.12),transparent 55%);
+}
 main{width:100%;max-width:36rem}
-.brand{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;margin:0;color:var(--ink);text-decoration:none}
-.rubro{margin:.15rem 0 0;color:var(--muted);font-size:.95rem}
-.code{font-family:Georgia,"Times New Roman",serif;font-size:clamp(4.5rem,18vw,7rem);line-height:1;font-weight:700;color:var(--accent);margin:2rem 0 .5rem}
-h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:700;margin:0 0 .5rem}
-h1{font-size:1.8rem}
-h2{font-size:1.3rem}
-p{margin:0 0 1rem}
-.es{border-top:1px solid var(--line);margin-top:1.5rem;padding-top:1.25rem}
-.es .rubro{margin:0 0 .75rem}
+.brand{font-family:"Barlow Condensed",sans-serif;font-size:1.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:0;color:var(--snow);text-decoration:none}
+.brand span{color:var(--signal)}
+.rubro{margin:.15rem 0 0;color:var(--steel);font-size:.95rem}
+.code{font-family:"Barlow Condensed",sans-serif;font-size:clamp(4.5rem,18vw,7rem);line-height:1;font-weight:800;color:var(--signal);margin:2rem 0 .5rem}
+h1{font-family:"Barlow Condensed",sans-serif;font-weight:800;margin:0 0 .5rem;font-size:2rem;text-transform:uppercase;letter-spacing:.03em}
+p{margin:0 0 1rem;color:var(--steel)}
 .actions{margin-top:1.75rem;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
-.btn{display:inline-block;background:var(--accent);color:var(--on-accent);text-decoration:none;padding:.8rem 1.4rem;border-radius:6px;font-weight:600;text-align:center}
-.btn small{display:block;font-weight:400;font-size:.8rem;opacity:.9}
-.btn:hover,.btn:focus-visible{filter:brightness(1.1)}
-.actions a:not(.btn){color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
-.actions a:not(.btn):hover{text-decoration-color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.contact{color:var(--muted);font-size:.95rem}
+.btn{display:inline-block;background:var(--signal);color:#111;text-decoration:none;padding:.8rem 1.4rem;font-weight:800;text-align:center;font-family:"Barlow Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.actions a:not(.btn){color:var(--snow);text-underline-offset:3px}
+.contact{color:var(--steel);font-size:.95rem}
 @media (max-width:480px){.actions{flex-direction:column;align-items:stretch}.btn{width:100%}}
 </style>
 <meta name="twitter:title" content="Siden finnes ikke — Motrull">
 </head>
 <body>
 <main>
-<a class="brand" href="/">Motrull</a>
-<p class="rubro">Tilbehør til bil</p>
+<a class="brand" href="/">Motr<span>ull</span></a>
+<p class="rubro">Biltilbehør for Norge</p>
 <div class="code" aria-hidden="true">404</div>
 <h1>Siden finnes ikke</h1>
 <p>Vi finner ikke denne siden hos Motrull. Den kan være flyttet, eller adressen kan være skrevet feil.</p>
-<section class="es" lang="es">
-<p class="rubro">Accesorios para auto</p>
-<h2>Página no encontrada</h2>
-<p>No encontramos esta página en Motrull. Puede que se haya movido o que la dirección esté mal escrita.</p>
-</section>
 <div class="actions">
-<a class="btn" href="/">Til forsiden <small lang="es">Volver al inicio</small></a>
-<a href="/#shop">Katalogen / <span lang="es">Catálogo</span></a>
-<span class="contact">Kontakt · <span lang="es">Contacto</span>: <a href="mailto:kontakt@motrull.no">kontakt@motrull.no</a></span>
+<a class="btn" href="/">Til forsiden</a>
+<a href="/#shop">Se produktene</a>
+<span class="contact">Kontakt: <a href="mailto:kontakt@motrull.no">kontakt@motrull.no</a></span>
 </div>
 </main>
 </body>
