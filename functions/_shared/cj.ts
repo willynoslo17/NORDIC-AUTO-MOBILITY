@@ -48,6 +48,8 @@ export async function cjJson(url: string, init: RequestInit, attempt = 1): Promi
     return cjJson(url, init, attempt + 1);
   }
   if (!response.ok || body?.result === false || body?.success === false) {
+    // Diagnostics only: endpoint path, HTTP status and CJ code/message. Never the key or token.
+    console.error("cj:error", new URL(url).pathname, response.status, body?.code, String(body?.message || "").slice(0, 200));
     throw new Error(String(body?.message || `CJ HTTP ${response.status}`));
   }
   return body;
@@ -142,7 +144,8 @@ export async function resolveCjVariant(
       const apiKey = env && env.CJ_API_KEY ? String(env.CJ_API_KEY) : "";
       if (apiKey) value = await fromCjApi(pid, apiKey);
       else if (options.allowFallback !== false) value = await fromFallback(pid);
-    } catch {
+    } catch (err) {
+      console.error("cj:variant_failed", String((err as any)?.message || err).slice(0, 200));
       value = null;
     }
     if (value) await cachePut(value);
