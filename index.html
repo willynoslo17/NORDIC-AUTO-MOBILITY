@@ -115,8 +115,14 @@ button,select,input{font:inherit}
 }
 .hero h1{
   font-family:"Barlow Condensed",sans-serif;
-  font-size:clamp(48px,9vw,92px);line-height:.92;
-  margin:12px 0 16px;text-transform:uppercase;letter-spacing:.02em;
+  font-size:clamp(56px,11vw,104px);line-height:.9;
+  margin:10px 0 8px;text-transform:uppercase;letter-spacing:.04em;
+}
+.hero h1::after{content:"";display:inline-block;width:.42em;height:.12em;margin-left:.08em;background:var(--signal);vertical-align:middle;transform:translateY(-.15em)}
+.hero-claim{
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:clamp(22px,3.2vw,34px);font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--snow);margin:0 0 12px!important;max-width:none!important;
 }
 .hero p{font-size:18px;line-height:1.55;color:var(--steel);max-width:520px;margin:0}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
@@ -340,7 +346,7 @@ button,select,input{font:inherit}
 </div>
 
 <nav class="nav">
-  <a class="brand" href="/">Motr<em>ull</em></a>
+  <a class="brand" href="/">Motrull</a>
   <div class="navright">
     <a class="control" href="#kategorier">Kategorier</a>
     <button class="control" type="button" id="cartOpen">Handlekurv (<span id="count">0</span>)</button>
@@ -350,8 +356,9 @@ button,select,input{font:inherit}
 <section class="hero" aria-label="Forside">
   <div class="hero-visual" aria-hidden="true"></div>
   <div class="herocontent">
-    <div class="eyebrow">Motrull · Biltilbehør · Norge</div>
-    <h1>Klar for langtur?</h1>
+    <div class="eyebrow">Biltilbehør · Norge</div>
+    <h1>Motrull</h1>
+    <p class="hero-claim">Klar for langtur?</p>
     <p>Praktisk biltilbehør til organisering, komfort og hverdagen på veien – levert til deg i Norge.</p>
     <div class="ctas">
       <a class="btn primary" href="#shop">Se produktene</a>
@@ -561,7 +568,7 @@ function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 
 function productBadges(p,i){
   const bits=[];
-  const isNew=p.isNew===true||(typeof p.listedNum==='number'&&p.listedNum>0&&p.listedNum<80)||i<3;
+  const isNew=p.isNew===true;
   if(isNew) bits.push('<span class="badge badge-new">Nyhet</span>');
   let pct=0;
   if(p.discountPercent>0) pct=Math.round(p.discountPercent);

@@ -106,7 +106,7 @@
       base: nok > 0 ? nok / NOK_PER_EUR : 0,
       priceNok: nok,
       listedNum: listedNum,
-      isNew: item.isNew === true || listedNum === 0 || listedNum < 60,
+      isNew: item.isNew === true || (listedNum > 0 && listedNum < 60) || (listedNum === 0 && item.isNew !== false && index < 3),
       compareAt: compareAt,
       discountPercent: discountPercent >= 5 && discountPercent <= 70 ? discountPercent : 0,
       v: "v" + ((index % 4) + 1),
