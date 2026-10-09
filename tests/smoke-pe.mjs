@@ -68,6 +68,14 @@ for (const [file, a, b] of legalPages) {
 assert(existsSync(join(root, "pe/legal.css")), "pe/legal.css exists");
 assert(pe.includes("/pe/libro-reclamaciones"), "pe homepage links Libro de Reclamaciones");
 
+const lima = read("pe/lima.css");
+assert(lima.includes("--sun") && lima.includes("Archivo Black"), "lima.css defines Lima palette/fonts");
+assert(pe.includes("/pe/lima.css"), "pe storefront loads lima.css");
+assert(pe.includes("Yape") && pe.includes("Plin") && /pr[oó]ximamente/i.test(pe), "pe shows Yape/Plin próximamente");
+assert(pe.includes("badge stock") && pe.includes("Envío a todo el Perú"), "pe products show stock and Peru shipping badges");
+assert(pe.includes("reseñas") || pe.includes("reviews"), "pe products show reviews");
+assert(!index.includes("lima.css"), "Norwegian store does not load lima.css");
+
 let winnersJson;
 try {
   winnersJson = JSON.parse(winners);

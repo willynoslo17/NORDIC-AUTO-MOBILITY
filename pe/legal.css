@@ -1,16 +1,33 @@
 /* Peru legal pages — builds on site legal.css with Spanish/PE chrome */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;600;700;800&display=swap");
 @import url("/legal.css");
 
 body.pe-legal {
-  --pe-accent: #e8f0ff;
+  --pe-accent: #ffd400;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(900px 420px at 0% 0%, rgba(255, 212, 0, 0.1), transparent 50%),
+    #0a0a0a;
 }
 
 body.pe-legal .lg-nav {
   gap: 10px;
 }
 
+body.pe-legal .lg-brand {
+  font-family: "Archivo Black", Impact, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 body.pe-legal .lg-brand span {
-  color: #6ba3ff;
+  color: #ffd400;
+}
+body.pe-legal h1 {
+  font-family: "Archivo Black", Impact, sans-serif;
+  text-transform: uppercase;
+}
+body.pe-legal .lg-nav {
+  border-bottom: 3px solid #ffd400;
 }
 
 body.pe-legal .pe-region {
