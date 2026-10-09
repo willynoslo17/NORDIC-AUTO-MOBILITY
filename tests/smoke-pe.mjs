@@ -53,6 +53,21 @@ assert(index.includes('id="regionSwitch"') || index.includes("region-switch.js")
 assert(index.includes("lang=\"nb\""), "Norwegian store html lang unchanged");
 assert(/Orden og komfort i bilen/.test(index), "Norwegian hero copy unchanged");
 
+const legalPages = [
+  ["pe/terminos.html", "Términos", "IGV"],
+  ["pe/privacidad.html", "MARTINEZ LOZANO INTERNASJONAL HANDEL", "responsable"],
+  ["pe/envios.html", "Envío a todo el Perú", "S/ 14"],
+  ["pe/cambios.html", "devoluciones", "support@motrull.no"],
+  ["pe/libro-reclamaciones.html", "Libro de Reclamaciones", "mailto:support@motrull.no"],
+];
+for (const [file, a, b] of legalPages) {
+  const text = read(file);
+  assert(text.includes(a) && text.includes(b), file + " has required legal content");
+  assert(text.includes("regionSwitch") || text.includes("region-switch.js"), file + " has region switch");
+}
+assert(existsSync(join(root, "pe/legal.css")), "pe/legal.css exists");
+assert(pe.includes("/pe/libro-reclamaciones"), "pe homepage links Libro de Reclamaciones");
+
 let winnersJson;
 try {
   winnersJson = JSON.parse(winners);
