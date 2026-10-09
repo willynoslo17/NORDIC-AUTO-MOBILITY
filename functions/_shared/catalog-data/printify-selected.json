@@ -29,7 +29,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Taza Motrull con logo de rueda, 11 oz",
+    "categoryEs": "Tazas",
+    "descEs": "Taza de cerámica blanca con el logo de la rueda Motrull en ambos lados. Hecha a pedido."
   },
   {
     "id": "pfy-auto-mug-eu",
@@ -61,7 +64,10 @@
     "printProviderId": 30,
     "printProvider": "OPT OnDemand",
     "origin": "Czech Republic",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Taza Motrull con patrón de rueda, 11 oz",
+    "categoryEs": "Tazas",
+    "descEs": "Taza de cerámica blanca con el patrón de rueda Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-tote",
@@ -93,7 +99,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Bolsa de algodón orgánico Motrull",
+    "categoryEs": "Bolsas",
+    "descEs": "Bolsa de algodón orgánico con el diseño Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-poster-art",
@@ -122,7 +131,10 @@
     "printProviderId": 30,
     "printProvider": "OPT OnDemand",
     "origin": "Czech Republic",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Póster A3 con arte de rueda Motrull",
+    "categoryEs": "Pósters",
+    "descEs": "Póster A3 con el arte de la rueda Motrull. Impreso a pedido."
   },
   {
     "id": "pfy-auto-poster-type",
@@ -151,7 +163,10 @@
     "printProviderId": 30,
     "printProvider": "OPT OnDemand",
     "origin": "Czech Republic",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Póster A3 «Maneja. Ajusta. Rueda.»",
+    "categoryEs": "Pósters",
+    "descEs": "Póster A3 con la frase Maneja, ajusta y rueda. Impreso a pedido."
   },
   {
     "id": "pfy-auto-journal",
@@ -183,7 +198,10 @@
     "printProviderId": 30,
     "printProvider": "OPT OnDemand",
     "origin": "Czech Republic",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Cuaderno de puntos Motrull",
+    "categoryEs": "Cuadernos",
+    "descEs": "Cuaderno con grilla de puntos y diseño Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-sticker",
@@ -213,7 +231,10 @@
     "printProviderId": 30,
     "printProvider": "OPT OnDemand",
     "origin": "Czech Republic",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Sticker de vinilo con rueda Motrull",
+    "categoryEs": "Stickers",
+    "descEs": "Sticker de vinilo con la rueda Motrull."
   },
   {
     "id": "pfy-auto-mousepad",
@@ -245,7 +266,10 @@
     "printProviderId": 30,
     "printProvider": "OPT OnDemand",
     "origin": "Czech Republic",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Alfombrilla para mouse Motrull",
+    "categoryEs": "Accesorios",
+    "descEs": "Alfombrilla para mouse con el diseño de rueda Motrull."
   },
   {
     "id": "pfy-auto-tee-black-s",
@@ -277,7 +301,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Polo Motrull con rueda · Negro · S",
+    "categoryEs": "Ropa",
+    "descEs": "Polo negro con la rueda Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-tee-black-m",
@@ -309,7 +336,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Polo Motrull con rueda · Negro · M",
+    "categoryEs": "Ropa",
+    "descEs": "Polo negro con la rueda Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-tee-black-l",
@@ -341,7 +371,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Polo Motrull con rueda · Negro · L",
+    "categoryEs": "Ropa",
+    "descEs": "Polo negro con la rueda Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-tee-black-xl",
@@ -373,7 +406,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Polo Motrull con rueda · Negro · XL",
+    "categoryEs": "Ropa",
+    "descEs": "Polo negro con la rueda Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-hoodie-black-s",
@@ -405,7 +441,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Polera con capucha Motrull · Negra · S",
+    "categoryEs": "Ropa",
+    "descEs": "Polera negra con capucha y la rueda Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-hoodie-black-m",
@@ -437,7 +476,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Polera con capucha Motrull · Negra · M",
+    "categoryEs": "Ropa",
+    "descEs": "Polera negra con capucha y la rueda Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-hoodie-black-l",
@@ -469,7 +511,10 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Polera con capucha Motrull · Negra · L",
+    "categoryEs": "Ropa",
+    "descEs": "Polera negra con capucha y la rueda Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-hoodie-black-xl",
@@ -501,6 +546,9 @@
     "printProviderId": 26,
     "printProvider": "Textildruck Europa",
     "origin": "Germany",
-    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims"
+    "compliance": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+    "nameEs": "Polera con capucha Motrull · Negra · XL",
+    "categoryEs": "Ropa",
+    "descEs": "Polera negra con capucha y la rueda Motrull. Hecha a pedido."
   }
 ]

@@ -22,7 +22,10 @@
     "printifyProductId": "6ab99b3df6ec4c0c6a0fdf74",
     "printifyVariantId": "79703",
     "printifyMatch": "id",
-    "priceNok": 169
+    "priceNok": 169,
+    "nameEs": "Taza Motrull con logo de rueda, 11 oz",
+    "categoryEs": "Tazas",
+    "descEs": "Taza de cerámica blanca con el logo de la rueda Motrull en ambos lados. Hecha a pedido."
   },
   {
     "id": "pfy-auto-mug-eu",
@@ -47,7 +50,10 @@
     "printifyProductId": "6ab99b4049ec84eb9c0a7d3e",
     "printifyVariantId": "62327",
     "printifyMatch": "id",
-    "priceNok": 159
+    "priceNok": 159,
+    "nameEs": "Taza Motrull con patrón de rueda, 11 oz",
+    "categoryEs": "Tazas",
+    "descEs": "Taza de cerámica blanca con el patrón de rueda Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-tote",
@@ -72,7 +78,10 @@
     "printifyProductId": "6ab99b43709cc009e0099eb5",
     "printifyVariantId": "79434",
     "printifyMatch": "id",
-    "priceNok": 359
+    "priceNok": 359,
+    "nameEs": "Bolsa de algodón orgánico Motrull",
+    "categoryEs": "Bolsas",
+    "descEs": "Bolsa de algodón orgánico con el diseño Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-poster-art",
@@ -94,7 +103,10 @@
     "printifyProductId": "6ab99b46709cc009e0099eb7",
     "printifyVariantId": "62339",
     "printifyMatch": "id",
-    "priceNok": 199
+    "priceNok": 199,
+    "nameEs": "Póster A3 con arte de rueda Motrull",
+    "categoryEs": "Pósters",
+    "descEs": "Póster A3 con el arte de la rueda Motrull. Impreso a pedido."
   },
   {
     "id": "pfy-auto-poster-type",
@@ -116,7 +128,10 @@
     "printifyProductId": "6ab99b49a0bd120c6301e049",
     "printifyVariantId": "62339",
     "printifyMatch": "id",
-    "priceNok": 199
+    "priceNok": 199,
+    "nameEs": "Póster A3 «Maneja. Ajusta. Rueda.»",
+    "categoryEs": "Pósters",
+    "descEs": "Póster A3 con la frase Maneja, ajusta y rueda. Impreso a pedido."
   },
   {
     "id": "pfy-auto-journal",
@@ -141,7 +156,10 @@
     "printifyProductId": "6ab99b4c71cabd2f82076afc",
     "printifyVariantId": "65483",
     "printifyMatch": "id",
-    "priceNok": 239
+    "priceNok": 239,
+    "nameEs": "Cuaderno de puntos Motrull",
+    "categoryEs": "Cuadernos",
+    "descEs": "Cuaderno con grilla de puntos y diseño Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-sticker",
@@ -164,7 +182,10 @@
     "printifyProductId": "6ab99b4f7a233ab55706a96d",
     "printifyVariantId": "65212",
     "printifyMatch": "id",
-    "priceNok": 109
+    "priceNok": 109,
+    "nameEs": "Sticker de vinilo con rueda Motrull",
+    "categoryEs": "Stickers",
+    "descEs": "Sticker de vinilo con la rueda Motrull."
   },
   {
     "id": "pfy-auto-mousepad",
@@ -189,7 +210,10 @@
     "printifyProductId": "6ab99b52885e0b9863076d17",
     "printifyVariantId": "62329",
     "printifyMatch": "id",
-    "priceNok": 229
+    "priceNok": 229,
+    "nameEs": "Alfombrilla para mouse Motrull",
+    "categoryEs": "Accesorios",
+    "descEs": "Alfombrilla para mouse con el diseño de rueda Motrull."
   },
   {
     "id": "pfy-auto-tee-black-s",
@@ -215,7 +239,10 @@
     "printifyProductId": "6ab99b54f6ec4c0c6a0fdf86",
     "printifyVariantId": "38164",
     "printifyMatch": "id",
-    "priceNok": 259
+    "priceNok": 259,
+    "nameEs": "Polo Motrull con rueda · Negro · S",
+    "categoryEs": "Ropa",
+    "descEs": "Polo negro con la rueda Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-tee-black-m",
@@ -241,7 +268,10 @@
     "printifyProductId": "6ab99b54f6ec4c0c6a0fdf86",
     "printifyVariantId": "38178",
     "printifyMatch": "id",
-    "priceNok": 259
+    "priceNok": 259,
+    "nameEs": "Polo Motrull con rueda · Negro · M",
+    "categoryEs": "Ropa",
+    "descEs": "Polo negro con la rueda Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-tee-black-l",
@@ -267,7 +297,10 @@
     "printifyProductId": "6ab99b54f6ec4c0c6a0fdf86",
     "printifyVariantId": "38192",
     "printifyMatch": "id",
-    "priceNok": 259
+    "priceNok": 259,
+    "nameEs": "Polo Motrull con rueda · Negro · L",
+    "categoryEs": "Ropa",
+    "descEs": "Polo negro con la rueda Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-tee-black-xl",
@@ -293,7 +326,10 @@
     "printifyProductId": "6ab99b54f6ec4c0c6a0fdf86",
     "printifyVariantId": "38206",
     "printifyMatch": "id",
-    "priceNok": 259
+    "priceNok": 259,
+    "nameEs": "Polo Motrull con rueda · Negro · XL",
+    "categoryEs": "Ropa",
+    "descEs": "Polo negro con la rueda Motrull. Hecho a pedido."
   },
   {
     "id": "pfy-auto-hoodie-black-s",
@@ -319,7 +355,10 @@
     "printifyProductId": "6ab99b5682080d60bf0bd8ee",
     "printifyVariantId": "32918",
     "printifyMatch": "id",
-    "priceNok": 689
+    "priceNok": 689,
+    "nameEs": "Polera con capucha Motrull · Negra · S",
+    "categoryEs": "Ropa",
+    "descEs": "Polera negra con capucha y la rueda Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-hoodie-black-m",
@@ -345,7 +384,10 @@
     "printifyProductId": "6ab99b5682080d60bf0bd8ee",
     "printifyVariantId": "32919",
     "printifyMatch": "id",
-    "priceNok": 689
+    "priceNok": 689,
+    "nameEs": "Polera con capucha Motrull · Negra · M",
+    "categoryEs": "Ropa",
+    "descEs": "Polera negra con capucha y la rueda Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-hoodie-black-l",
@@ -371,7 +413,10 @@
     "printifyProductId": "6ab99b5682080d60bf0bd8ee",
     "printifyVariantId": "32920",
     "printifyMatch": "id",
-    "priceNok": 689
+    "priceNok": 689,
+    "nameEs": "Polera con capucha Motrull · Negra · L",
+    "categoryEs": "Ropa",
+    "descEs": "Polera negra con capucha y la rueda Motrull. Hecha a pedido."
   },
   {
     "id": "pfy-auto-hoodie-black-xl",
@@ -397,6 +442,9 @@
     "printifyProductId": "6ab99b5682080d60bf0bd8ee",
     "printifyVariantId": "32921",
     "printifyMatch": "id",
-    "priceNok": 689
+    "priceNok": 689,
+    "nameEs": "Polera con capucha Motrull · Negra · XL",
+    "categoryEs": "Ropa",
+    "descEs": "Polera negra con capucha y la rueda Motrull. Hecha a pedido."
   }
 ]

@@ -202,23 +202,41 @@
     } finally {
       clearTimeout(timer);
     }
-    if (config.cjLocalFallback === false) return []; // store sells CJ winners only (no generic local fallback)
+    if (config.cjLocalFallback === false || region === "pe") return []; // /pe/ never falls back to English/Norwegian names
     const localItems = await loadJson(LOCAL_FILES.cj);
     return localItems.filter(allowed).map((item, index) => curated(item, index, config.category, "cj")).filter(item => item.base > 0).slice(0, 150);
   }
 
-  async function loadPodCatalog(provider, category, query) {
+  function localizePod(item, index, category, provider, region) {
+    const row = curated({ ...item, provider }, index, category, provider);
+    if (!row) return null;
+    if (region !== "pe") return row;
+    const name = String(item.nameEs || "").trim();
+    const desc = String(item.descEs || item.blurbEs || "").trim();
+    if (!name || !desc) return null;
+    row.name = name;
+    row.description = desc;
+    row.cat = String(item.categoryEs || item.category || category);
+    row.tag = row.cat;
+    row.brand = "Motrull";
+    row.supplier = "Motrull";
+    return row;
+  }
+
+  async function loadPodCatalog(provider, category, query, regionHint) {
+    const region = storefrontRegion({ region: regionHint || "" });
     const q = encodeURIComponent(podQuery(query || ""));
-    const apiItems = await loadApiProducts(ENDPOINTS[provider] + "?q=" + q, BACKGROUND_SOURCES.includes(provider) ? BACKGROUND_TIMEOUT_MS : SOURCE_TIMEOUT_MS);
+    const apiItems = await loadApiProducts(ENDPOINTS[provider] + "?q=" + q + "&region=" + encodeURIComponent(region), BACKGROUND_SOURCES.includes(provider) ? BACKGROUND_TIMEOUT_MS : SOURCE_TIMEOUT_MS);
     if (apiItems.length) {
-      return apiItems.map((item, index) => curated({ ...item, provider }, index, category, provider)).filter(item => item.base > 0).slice(0, 50);
+      return apiItems.map((item, index) => localizePod(item, index, category, provider, region)).filter(item => item && item.base > 0).slice(0, 50);
     }
     // Printify may still use curated selected JSON. Gelato/Printful NEVER use *-selected clones.
     if (provider === "printify") {
       const selected = await loadJson(LOCAL_FILES.printify);
       if (selected.length) {
-        return selected.map((item, index) => curated(item, index, category, provider)).filter(item => item.base > 0).slice(0, 50);
+        return selected.map((item, index) => localizePod(item, index, category, provider, region)).filter(item => item && item.base > 0).slice(0, 50);
       }
+      if (region === "pe") return [];
       const fallback = await loadJson(LOCAL_FILES.printifyFallback);
       return fallback.map((item, index) => curated(item, index, category, provider)).filter(item => item.base > 0).slice(0, 50);
     }
@@ -334,9 +352,9 @@
     const keep = storefrontItem();
     const loaders = {
       cj: cfg.cj === false ? Promise.resolve([]) : loadCjSelected(cfg), // store opted out of CJ: no request
-      printify: loadPodCatalog("printify", category, query),
-      gelato: loadPodCatalog("gelato", category, query),
-      printful: loadPodCatalog("printful", category, query)
+      printify: loadPodCatalog("printify", category, query, config.region),
+      gelato: loadPodCatalog("gelato", category, query, config.region),
+      printful: loadPodCatalog("printful", category, query, config.region)
     };
     window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
     /* Render each supplier as soon as it answers (or falls back after its timeout). */

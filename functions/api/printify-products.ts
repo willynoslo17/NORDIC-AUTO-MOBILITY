@@ -30,6 +30,9 @@ export function linkedProducts(rows: unknown = LINKED) {
       printifyVariantId: String(p.printifyVariantId),
       printifyMatch: "id",
       name: String(p.name || "Printify product"),
+      nameEs: String(p.nameEs || ""),
+      descEs: String(p.descEs || ""),
+      categoryEs: String(p.categoryEs || ""),
       size: String(p.size || ""),
       category: String(p.category || ""),
       description: String(p.description || ""),
@@ -52,6 +55,19 @@ export async function onRequestGet(context: any) {
   const query = url.searchParams.get("q") || url.searchParams.get("sector") || "";
   const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
   let products: any[] = linkedProducts();
+  if (url.searchParams.get("region") === "pe") {
+    products = products
+      .filter((p) => p.nameEs && p.descEs)
+      .map((p) => ({
+        ...p,
+        name: p.nameEs,
+        description: p.descEs,
+        category: p.categoryEs || "Accesorios",
+        cat: p.categoryEs || "Accesorios",
+        brand: "Motrull",
+        supplier: "Motrull",
+      }));
+  }
   products = await withQuotes(
     context.env,
     "printify",
