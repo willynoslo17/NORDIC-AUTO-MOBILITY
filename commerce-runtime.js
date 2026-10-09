@@ -172,7 +172,12 @@
   function enhanceCheckout() {
     if (!CHECKOUT_ENABLED) {
       const trigger = document.querySelector(".drawer .checkout");
-      if (trigger) { trigger.disabled = true; trigger.onclick = null; }
+      if (trigger) {
+        trigger.disabled = true;
+        trigger.setAttribute("aria-disabled", "true");
+        trigger.onclick = null;
+        trigger.textContent = "KOMMER SNART";
+      }
       const pausedForm = document.getElementById("checkoutForm");
       if (pausedForm) pausedForm.onsubmit = event => { event.preventDefault(); };
       return;

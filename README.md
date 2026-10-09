@@ -9,6 +9,8 @@ The store has its own `/api/cj-products` catalog endpoint and a validated `/api/
 
 The storefront remains in non-charging request mode until supplier stock, landed cost, delivery time, product compliance and a payment provider are verified. Before enabling payment for a SKU, record its manufacturer, responsible economic operator, safety warnings, destination availability, current shipping quote, VAT treatment and return address.
 
+**Checkout is OFF** (`CHECKOUT_ENABLED = false`). Per-SKU stock, plazo and cumplimiento for Motrull auto/POD products: [`PRODUCT-READINESS.md`](PRODUCT-READINESS.md) and [`catalog/product-readiness.json`](catalog/product-readiness.json). No SKU is `chargeReady` until blockers are cleared with real supplier data — do not invent manufacturers, CE marks or API keys.
+
 ## Separate supplier catalogs (no blend)
 
 - Storefront switcher: **CJ | Printify | Gelato | Printful** — `window.nordicCatalogs` keeps arrays separate; default UI shows CJ only.
