@@ -1,7 +1,7 @@
 import { withQuotes } from "../_shared/quote";
 import curatedSnapshot from "../_shared/catalog-data/cj-curated-snapshot.json";
 import { retailNok } from "../_shared/pricing";
-import { winnerRows, winnersStatus, WINNERS_ONLY, type WinnerDeps } from "../_shared/cj-winners";
+import { winnerRows, winnersStatus, WINNERS_ONLY, parseWinnerRegion, type WinnerDeps } from "../_shared/cj-winners";
 /** Response fields that may be public. The cached payload keeps raw CJ rows (data.content, costs) server-side only. */
 const PUBLIC_KEYS = ["ok", "supplier", "sector", "query", "page", "markets", "storefrontCap", "count", "source"];
 function publicPayload(payload: any, products: any[]) {
@@ -491,14 +491,18 @@ export async function onRequestGet(context: any) {
   };
   const apiKey = context.env.CJ_API_KEY;
 
+  // region=pe → /pe/ catalog (shared + pe-only, Spanish names). Default/no → Norwegian store (hides pe-only).
+  const region = parseWinnerRegion(url.searchParams.get("region"));
+
   // Review list of winner candidates (no costs, no quotes) and the winners-only storefront (cj-winners.json).
   if (apiKey && url.searchParams.get("winners") === "review") {
-    const rows = await winnerRows(winnerDeps(context, url.origin), "review");
+    const rows = await winnerRows(winnerDeps(context, url.origin), "review", new Set(), region);
     return Response.json(
       {
         ok: true,
         supplier: "cj",
         sector: PROFILE.sector,
+        region,
         source: "cj-winners-review",
         count: rows.length,
         keywordsCached: new Set(rows.map((row) => row.keyword)).size,
@@ -512,10 +516,10 @@ export async function onRequestGet(context: any) {
     );
   }
   if (apiKey && WINNERS_ONLY) {
-    const rows = page === 1 ? await winnerRows(winnerDeps(context, url.origin), "grid") : [];
+    const rows = page === 1 ? await winnerRows(winnerDeps(context, url.origin), "grid", new Set(), region) : [];
     const products = await withQuotes(context.env, "cj", rows, cjIds);
     return Response.json(
-      { ok: true, supplier: "cj", sector: PROFILE.sector, query, page, markets: ["NO", "EU", "PE"], count: products.length, source: "cj-winners", products },
+      { ok: true, supplier: "cj", sector: PROFILE.sector, query, page, region, markets: ["NO", "EU", "PE"], count: products.length, source: "cj-winners", products },
       { headers }
     );
   }

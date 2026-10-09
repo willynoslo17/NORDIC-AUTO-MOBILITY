@@ -120,6 +120,7 @@
     if (item.printfulSource) out.printfulSource = String(item.printfulSource);
     if (provider === "cj" && rawId) out.cjPid = rawId;
     if (item.quote) out.quote = String(item.quote);
+    if (item.description) out.description = String(item.description);
     return out;
   }
 
@@ -160,19 +161,38 @@
     return item => !rx.test(String(item.name || item.nameEn || "")) || item.hasCECertification === true || item.hasCECertification === "true";
   }
 
+  function storefrontRegion(config) {
+    const fromCfg = String(config && config.region || "").toLowerCase();
+    if (fromCfg === "pe" || fromCfg === "peru") return "pe";
+    try {
+      const path = (location.pathname || "").replace(/\/+$/, "") || "/";
+      if (path === "/pe" || path.indexOf("/pe/") === 0) return "pe";
+      if (document.body && document.body.getAttribute("data-store") === "pe") return "pe";
+    } catch (_) {}
+    return "no";
+  }
+
   async function loadCjSelected(config) {
     const allowed = cjAllowed(config);
+    const region = storefrontRegion(config);
     const timeout = new AbortController();
     const timer = setTimeout(() => timeout.abort(), SOURCE_TIMEOUT_MS);
     try {
-      const url = ENDPOINTS.cj + "?q=" + encodeURIComponent(config.query || "");
+      const url = ENDPOINTS.cj + "?q=" + encodeURIComponent(config.query || "") + "&region=" + encodeURIComponent(region);
       const response = await fetch(url, { signal: timeout.signal, cache: "no-store" });
       if (response.ok) {
         const payload = await response.json();
         if (Array.isArray(payload.products) && payload.products.length) {
           return payload.products
             .filter(allowed)
-            .map((item, index) => curated({ ...item, brand: item.brand || "CJ Dropshipping", supplier: item.supplier || "CJ Dropshipping" }, index, config.category, "cj"))
+            .map((item, index) => {
+              const row = curated({ ...item, brand: item.brand || "CJ Dropshipping", supplier: item.supplier || "CJ Dropshipping" }, index, config.category, "cj");
+              if (region === "pe") {
+                row.description = String(item.description || item.descEs || "");
+                if (item.nameEs) row.name = String(item.nameEs);
+              }
+              return row;
+            })
             .filter(item => item.base > 0)
             .slice(0, 600); // curated set (150) + trend winners
         }

@@ -164,7 +164,9 @@ function renderProducts(){
   $('#products').innerHTML=list.length?list.map(p=>{
     const s=peSeed(p.id);
     const img=p.image?'<img src="'+p.image+'" alt="'+String(p.name||'').replace(/"/g,'')+'" loading="lazy" width="800" height="800">':(p.cat||'');
-    return `<article class="product"><div class="visual ${p.v||''}">${img}</div><div class="productbody"><div class="tag">${p.tag||''}</div><h3>${p.name}</h3><div class="price">${money(p.base)} <span class="pe-igv">IGV incl.</span></div><div class="reviews"><span class="stars" aria-label="${s.stars} de 5">${peStars(s.stars)}</span> · ${s.reviews} reseñas</div><div class="badges"><span class="badge stock">Stock: ${s.stock}</span><span class="badge time">10–25 días</span><span class="badge ship">Envío a todo el Perú</span></div><div class="delivery">Entrega estimada 10–25 días hábiles</div><button class="add" onclick="add(${p.id})">AÑADIR AL CARRITO</button></div></article>`;
+    const desc = String(p.description || '').trim();
+    const descHtml = desc ? `<p class="pe-desc">${desc.replace(/</g,'&lt;')}</p>` : '';
+    return `<article class="product"><div class="visual ${p.v||''}">${img}</div><div class="productbody"><div class="tag">${p.tag||''}</div><h3>${p.name}</h3>${descHtml}<div class="price">${money(p.base)} <span class="pe-igv">IGV incl.</span></div><div class="reviews"><span class="stars" aria-label="${s.stars} de 5">${peStars(s.stars)}</span> · ${s.reviews} reseñas</div><div class="badges"><span class="badge stock">Stock: ${s.stock}</span><span class="badge time">10–25 días</span><span class="badge ship">Envío a todo el Perú</span></div><div class="delivery">Entrega estimada 10–25 días hábiles</div><button class="add" onclick="add(${p.id})">AÑADIR AL CARRITO</button></div></article>`;
   }).join(''):'<p class="muted">Cargando productos… Si no aparecen, vuelve a intentar en unos segundos.</p>';
 }
 function add(id){cart[id]=(cart[id]||0)+1;renderCart();openCart()}
@@ -199,7 +201,7 @@ renderFilters();renderProducts();renderCart();
 </script>
 <script src="/region-switch.js"></script>
 <script src="/supplier-bridge.js"></script>
-<script>loadNordicCatalog({query:"car accessories",category:"Accesorios auto"});</script>
+<script>loadNordicCatalog({query:"car accessories",category:"Accesorios auto",region:"pe"});</script>
 <script src="/variant-picker.js"></script>
 <script src="/commerce-runtime.js"></script>
 </body>
