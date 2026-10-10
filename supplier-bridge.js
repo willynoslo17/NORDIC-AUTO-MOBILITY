@@ -53,14 +53,23 @@
     "kids apparel": "Barneklær",
     "baby apparel": "Babyklær",
     "mugs": "Krus",
+    "krus": "Krus",
     "posters": "Plakater",
+    "plakater": "Plakater",
     "canvas": "Lerretsbilder",
     "bags": "Vesker",
+    "vesker": "Vesker",
     "tote-bags": "Handlenett",
     "stationery": "Papirvarer",
+    "papirvarer": "Papirvarer",
     "accessories": "Tilbehør",
+    "tilbehør": "Tilbehør",
     "home": "Hjem",
-    "phone-cases": "Mobildeksler"
+    "phone-cases": "Mobildeksler",
+    "auto & mobility": "Bilutstyr",
+    "car accessories": "Bilutstyr",
+    "bilutstyr": "Bilutstyr",
+    "klær": "Klær"
   };
   const BRAND_COLORS = {
     cj: "#0f766e",
@@ -68,6 +77,43 @@
     gelato: "#ea580c",
     printful: "#2563eb"
   };
+  /** English → Norwegian title cleanup for leftover EN product titles on /. */
+  const NAME_NB_RULES = [
+    [/organic cotton tote/i, "Handlenett i økologisk bomull"],
+    [/wheel logo mug/i, "Krus med hjul-logo"],
+    [/wheel pattern mug/i, "Krus med hjulmønster"],
+    [/wheel art poster/i, "Hjulkunst-plakat"],
+    [/dot-?grid notebook/i, "Prikkgrid-notatbok"],
+    [/vinyl sticker/i, "Vinylklistremerke"],
+    [/mouse pad/i, "Musematte"],
+    [/hoodie/i, "Hettegenser"],
+    [/\btee\b|t-?shirt/i, "T-skjorte"],
+    [/poster/i, "Plakat"],
+    [/\bmug\b/i, "Krus"],
+    [/car phone holder|phone holder.*car|air outlet phone/i, "Mobilholder til bil"],
+    [/inflatable.*(mattress|bed)|car mattress/i, "Oppblåsbar bilmadrass"],
+    [/armrest/i, "Armlenepute til bil"],
+    [/sun visor/i, "Solskjermtilbehør"],
+    [/air (outlet|vent).*(perfume|fragrance|aroma)|aromatherapy|car fragrance|perfume.*car/i, "Bilduft"],
+    [/seat (gap|crevice)|gap filler/i, "Spaltefyller til bilsete"],
+    [/microfiber/i, "Mikrofiberhåndkle til bil"],
+    [/neck pillow/i, "Nakkepute til bil"],
+    [/car accessories|auto & mobility/i, "Biltilbehør"]
+  ];
+  function toNorwegianName(raw, fallbackCat) {
+    const name = String(raw || "").trim();
+    if (!name) return fallbackCat || "Produkt";
+    if (/[æøåÆØÅ]/.test(name) || /^(Motrull|Mobilholder|Spaltefyller|Mikrofiber|Frontrute|Setetrekk|Børste|Oppblåsbar|Bilduft|Armlene|Solskjerm|Interiør|Duftklips|Oljeelement|LED-|Hundepynt|Smart |Rød |C-formet|Lærbeskyttet|Sikkerhet|Metallpynt|Grise|Retro |Helikopter|Brille|Søt |Dekor|Fjær|Aroma)/i.test(name)) {
+      return name.replace(/\b(CJ|Printify|Printful|Gelato|Dropshipping)\b/gi, "").replace(/\s{2,}/g, " ").trim() || fallbackCat || "Produkt";
+    }
+    for (const [rx, nb] of NAME_NB_RULES) {
+      if (rx.test(name)) {
+        const brand = /\bMotrull\b/i.test(name) ? "Motrull " : "";
+        return (brand + nb).trim();
+      }
+    }
+    return name.replace(/\b(CJ|Printify|Printful|Gelato|Dropshipping)\b/gi, "").replace(/\s{2,}/g, " ").trim() || fallbackCat || "Produkt";
+  }
 
   window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
   window.nordicActiveSupplier = "cj";
@@ -99,11 +145,14 @@
     const compareNok = Number(item.compareAtNok || item.compareAt || 0);
     const compareAt = compareNok > nok ? (compareNok / NOK_PER_EUR) : 0;
     const discountPercent = compareAt > 0 ? Math.round((1 - (nok / NOK_PER_EUR) / compareAt) * 100) : (Number(item.discountPercent) || 0);
+    const catSeed = item.category || item.cat || category;
+    /* Norwegian storefront titles; /pe/ overwrites with nameEs in loadCjSelected / localizePod. */
+    const displayName = toNorwegianName(item.name || item.nameEn || "", catSeed);
     const out = {
       id: numericId != null ? numericId : baseId + index,
       externalId: String(item.id || item.gelatoProductUid || item.printfulProductId || item.printifyProductId || ""),
-      name: item.name || (LABELS[provider] || "Supplier") + " product",
-      cat: item.category || item.cat || category,
+      name: displayName,
+      cat: catSeed,
       base: nok > 0 ? nok / NOK_PER_EUR : 0,
       priceNok: nok,
       listedNum: listedNum,

@@ -55,13 +55,20 @@ assert(bridge.includes("region=") && bridge.includes("storefrontRegion"), "suppl
 assert(/const CHECKOUT_ENABLED = false/.test(runtime), "commerce-runtime CHECKOUT_ENABLED=false");
 assert(/const CHECKOUT_ENABLED = false/.test(checkout), "create-checkout-session CHECKOUT_ENABLED=false");
 
-/* Norwegian header: one control (market) that includes Perú — no separate regionSwitch. */
+/* Norwegian storefront is Norway-only premium-garage; Peru stays under /pe/. */
 assert(!index.includes('id="regionSwitch"'), "Norwegian index has no separate regionSwitch");
-assert(index.includes('id="market"') && index.includes("Perú"), "Norwegian market select includes Perú");
-assert(index.includes("location.assign('/pe/')") || index.includes('location.assign("/pe/")'), "Norwegian market PE navigates to /pe/");
+assert(!index.includes('id="market"'), "Norwegian index has no multi-market select");
+assert(!/<option[^>]*>\s*Peru/i.test(index) && !index.includes('value="Peru"'), "Norwegian checkout has no Peru delivery option");
+assert(!/IR AL/i.test(index), "Norwegian checkout has no Spanish IR AL line");
 assert(index.includes("lang=\"nb\""), "Norwegian store html lang unchanged");
-assert(/Orden og komfort i bilen/.test(index), "Norwegian hero copy unchanged");
-assert(index.includes("region-switch.js"), "Norwegian index still loads region-switch.js");
+assert(/Klar for langtur/.test(index) && /Motrull/.test(index), "Norwegian premium-garage hero branding present");
+assert(index.includes("hero-visual") && index.includes("<img"), "Norwegian hero uses a real image (not empty dark block)");
+assert(/Gratis frakt/i.test(index) && /999/.test(index), "Norwegian trust bar shows free shipping threshold");
+assert(/Klarna/i.test(index) && /Vipps/i.test(index) && /kommer snart/i.test(index), "Klarna and Vipps shown as kommer snart");
+assert(/30 dagers retur/i.test(index), "Norwegian trust bar shows 30-day returns");
+assert(/kontakt@motrull\.no/.test(index) && /\+47 912 90 416/.test(index), "Norwegian store shows visible contact");
+assert(/KOMMER SNART/.test(index), "Norwegian checkout CTA is KOMMER SNART while checkout is off");
+assert(!/Wheel Logo Mug|Organic Cotton Tote|Wheel Tee/i.test(index), "Norwegian index shell has no English Printify titles");
 
 assert(winnersTs.includes("allowedInRegion") && winnersTs.includes('region === "pe"'), "cj-winners.ts filters by region");
 assert(winnersTs.includes("PE_FILTERS") || winnersTs.includes("pe."), "cj-winners.ts has PE filter set");

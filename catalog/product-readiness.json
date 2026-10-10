@@ -1,0 +1,3808 @@
+{
+  "store": "nordic-auto-mobility",
+  "brand": "Motrull",
+  "site": "https://motrull.no/",
+  "documentedAt": "2026-10-09",
+  "checkout": {
+    "enabled": false,
+    "flag": "CHECKOUT_ENABLED=false in commerce-runtime.js and functions/api/create-checkout-session.ts",
+    "note": "Do not invent STRIPE_SECRET_KEY / CJ_API_KEY / POD tokens. Use env already configured by owner."
+  },
+  "policy": {
+    "source": "README.md",
+    "rule": "Non-charging until stock, landed cost, delivery time, product compliance and payment provider are verified. Before enabling payment for a SKU, record manufacturer, responsible economic operator, safety warnings, destination availability, current shipping quote, VAT treatment and return address."
+  },
+  "seller": {
+    "legalName": "Martinez Lozano Internasjonal Handel",
+    "orgNr": "935 407 095 MVA",
+    "address": "Norbygata 19, 0187 Oslo, Norge",
+    "brand": "Motrull",
+    "site": "https://motrull.no/",
+    "support": "support@motrull.no",
+    "orders": "orders@motrull.no"
+  },
+  "catalogScope": {
+    "cjSelected": 30,
+    "printifySelected": 16,
+    "gelatoProducts": 0,
+    "printfulProducts": 0,
+    "note": "Only curated sellable rows (CJ selected + Printify selected). Empty Gelato/Printful catalogs omitted as product lines."
+  },
+  "summary": {
+    "totalSkus": 46,
+    "chargeReadyCount": 0,
+    "cjInStock": 30,
+    "cjWithBlockers": 30,
+    "printifyLinked": 16
+  },
+  "products": [
+    {
+      "id": "1396732241480126464",
+      "sku": "CJQT1141499",
+      "name": "Car Accessories For Women's Aromatherapy Car Interior Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 2.7,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 216747,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "car-fragrance",
+        "summary": "Car fragrance / aromatherapy accessory. Not sold as cosmetic, medicine or air-purifier. No CLP/SDS or fragrance allergen dossier verified in feed.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not ingest; keep away from eyes and children",
+          "May cause allergic reaction; ventilate cabin if overpowering",
+          "Not a medical or air-quality device"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "CLP/labeling if mixture",
+          "SDS if required",
+          "EU responsible person for fragrance mixture if applicable"
+        ],
+        "blockers": [
+          "fragrance-chemical-compliance-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "992A4F82-5A1E-4C7A-AAEB-A6796BD6688D",
+      "sku": "CJQCNBQC00222",
+      "name": "Car accessories armrest box pad",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 3.44,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 64033,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "organizer-accessory",
+        "summary": "Organizer / clip / case accessory. General consumer good; not a child restraint or safety device.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not block airbags, vents or driving controls",
+          "Secure loose items while driving"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1590664411046490112",
+      "sku": "CJQC1609541",
+      "name": "Car Mounted Perfume Accessories Air Conditioner Air Outlet Perfume Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.78,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 89850,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "car-fragrance",
+        "summary": "Car fragrance / aromatherapy accessory. Not sold as cosmetic, medicine or air-purifier. No CLP/SDS or fragrance allergen dossier verified in feed.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not ingest; keep away from eyes and children",
+          "May cause allergic reaction; ventilate cabin if overpowering",
+          "Not a medical or air-quality device"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "CLP/labeling if mixture",
+          "SDS if required",
+          "EU responsible person for fragrance mixture if applicable"
+        ],
+        "blockers": [
+          "fragrance-chemical-compliance-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1395619819377790976",
+      "sku": "CJQC1137942",
+      "name": "Inflatable Car Mattress SUV Inflatable Car Multifunctional Car Inflatable Bed Car Accessories Inflatable Bed",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 369,
+      "supplierCostUsd": 13.39,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 400000,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "inflatable-comfort",
+        "summary": "Inflatable car mattress/bed. General consumer good; not a child product or medical device. No CE/toy claims in listing.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Risk of suffocation for infants — not a child bed",
+          "Do not block airbags or seatbelts; park safely before use",
+          "Check max load and vehicle fit before use"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition",
+          "age grading if any"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "5356C6D7-50F4-47E7-99B2-B1A76E006E35",
+      "sku": "CJQCQCQC01026",
+      "name": "Car Interior Decoration Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.75,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 2378478,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1555081588743090176",
+      "sku": "CJQC1538153",
+      "name": "Inflatable Bed For Hatchback Car Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 739,
+      "supplierCostUsd": 27.2,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 92855,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "inflatable-comfort",
+        "summary": "Inflatable car mattress/bed. General consumer good; not a child product or medical device. No CE/toy claims in listing.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Risk of suffocation for infants — not a child bed",
+          "Do not block airbags or seatbelts; park safely before use",
+          "Check max load and vehicle fit before use"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition",
+          "age grading if any"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "92388C83-2A19-4717-9663-B57B36AABAC2",
+      "sku": "CJQCQCQC01516",
+      "name": "Bright bar car accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 2.53,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 140000,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "20656A2D-FB3F-44DB-BD0D-ACCB3DA13A76",
+      "sku": "CJQCQCQC02124",
+      "name": "Creative feather car pendant safety car accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.35,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 50000,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1494570839587295232",
+      "sku": "CJQT1419085",
+      "name": "Car Door Handle Decorative Sticker Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 309,
+      "supplierCostUsd": 11.4,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 96367,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1646729003237122048",
+      "sku": "CJQC1734065",
+      "name": "Perfume Car Fragrance Accessories Decorate",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 0.53,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 98861,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "car-fragrance",
+        "summary": "Car fragrance / aromatherapy accessory. Not sold as cosmetic, medicine or air-purifier. No CLP/SDS or fragrance allergen dossier verified in feed.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not ingest; keep away from eyes and children",
+          "May cause allergic reaction; ventilate cabin if overpowering",
+          "Not a medical or air-quality device"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "CLP/labeling if mixture",
+          "SDS if required",
+          "EU responsible person for fragrance mixture if applicable"
+        ],
+        "blockers": [
+          "fragrance-chemical-compliance-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "F540EB1A-3DE5-4A8B-821B-9C94275CAEF5",
+      "sku": "CJQCQCQC02233",
+      "name": "Car Sun Visor Clip Car Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.47,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 30001,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "organizer-accessory",
+        "summary": "Organizer / clip / case accessory. General consumer good; not a child restraint or safety device.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not block airbags, vents or driving controls",
+          "Secure loose items while driving"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1382927992921133056",
+      "sku": "CJQT1082623",
+      "name": "Car Ornaments Motorcycle Cute Car Center Console Accessories Car Cartoon",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.03,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 560000,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1393469266648502272",
+      "sku": "CJQC1130069",
+      "name": "Helicopter Car Accessories Ornaments Inside The Car",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 119,
+      "supplierCostUsd": 4.2,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 120000,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1659944637399838720",
+      "sku": "CJQC1762001",
+      "name": "Car Interior Decoration Glasses Case Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 209,
+      "supplierCostUsd": 7.43,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 14525,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "F5C82C5D-A18C-4E06-853D-D756B1531AC8",
+      "sku": "CJQCQCQC00362",
+      "name": "Car air conditioning aromatherapy accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 149,
+      "supplierCostUsd": 5.17,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 34550,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "car-fragrance",
+        "summary": "Car fragrance / aromatherapy accessory. Not sold as cosmetic, medicine or air-purifier. No CLP/SDS or fragrance allergen dossier verified in feed.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not ingest; keep away from eyes and children",
+          "May cause allergic reaction; ventilate cabin if overpowering",
+          "Not a medical or air-quality device"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "CLP/labeling if mixture",
+          "SDS if required",
+          "EU responsible person for fragrance mixture if applicable"
+        ],
+        "blockers": [
+          "fragrance-chemical-compliance-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1365487142511448064",
+      "sku": "CJQC1022963",
+      "name": "Retro Cute Kitten Car Ornaments Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.22,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 60000,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1473299195782893568",
+      "sku": "CJQT1385259",
+      "name": "Car Accessories Piggy Creative Cartoon Cute Car Decoration",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.51,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 454384,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1549677724544421888",
+      "sku": "CJQC1528710",
+      "name": "Car Accessories Air Outlet Storage Bag",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 3.39,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 123367,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "organizer-accessory",
+        "summary": "Organizer / clip / case accessory. General consumer good; not a child restraint or safety device.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not block airbags, vents or driving controls",
+          "Secure loose items while driving"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1634593229494562816",
+      "sku": "CJQC1703890",
+      "name": "Cute Cartoon Pig Car Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.29,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 95786,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "E8C6CC5B-6870-4A86-95C7-C544259CA06C",
+      "sku": "CJQCQCQT00264",
+      "name": "Motorcycle electric car accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 0.59,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 11051,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "electrical-or-powered",
+        "summary": "Powered / electrical / lighting accessory. EEA sale typically needs applicable CE/marking and documentation; none verified in CJ feed.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Follow vehicle electrical limits; professional install if unsure",
+          "Do not modify wiring or bypass fuses",
+          "Keep away from moisture and flammable materials"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "CE/DoC",
+          "voltage rating",
+          "EMC/LVD applicability"
+        ],
+        "blockers": [
+          "electrical-ce-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "2408030742241615900",
+      "sku": "CJYD2100740",
+      "name": "C- Shaped Car Flower Container Car Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.38,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 94731,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "organizer-accessory",
+        "summary": "Organizer / clip / case accessory. General consumer good; not a child restraint or safety device.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not block airbags, vents or driving controls",
+          "Secure loose items while driving"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "2507050211141628800",
+      "sku": "CJYD2421252",
+      "name": "Leather Car Accessories Car Glasses Frame",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 2.63,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 27377,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "organizer-accessory",
+        "summary": "Organizer / clip / case accessory. General consumer good; not a child restraint or safety device.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not block airbags, vents or driving controls",
+          "Secure loose items while driving"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "2624D20A-C682-4256-8A8F-935E2A8F1A70",
+      "sku": "CJQCQCQC01314",
+      "name": "Muslim home security pendant car accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 219,
+      "supplierCostUsd": 7.98,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 12585,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "B229354F-C387-4631-87D7-25DE877B9B70",
+      "sku": "CJQCQCQC01533",
+      "name": "Creative metal car accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 139,
+      "supplierCostUsd": 4.82,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 40000,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1570363769107263488",
+      "sku": "CJQT1564811",
+      "name": "Car Oil Filter Element Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 129,
+      "supplierCostUsd": 4.53,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 25497,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "vehicle-part-adjacent",
+        "summary": "Vehicle filter-adjacent accessory. Compatibility not guaranteed; not a regulated safety-critical brake/steering part in listing text.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Confirm fitment for make/model/year before install",
+          "Incorrect filter use can damage the vehicle",
+          "Prefer professional installation when unsure"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "exact vehicle compatibility table",
+          "OEM cross-reference"
+        ],
+        "blockers": [
+          "fitment-unverified",
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1426422841884151808",
+      "sku": "CJQC1251458",
+      "name": "Car Carousel Perfume Car Solar Car Essential Oil Fragrance Fragrance Decoration Car Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.3,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 117684,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "car-fragrance",
+        "summary": "Car fragrance / aromatherapy accessory. Not sold as cosmetic, medicine or air-purifier. No CLP/SDS or fragrance allergen dossier verified in feed.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not ingest; keep away from eyes and children",
+          "May cause allergic reaction; ventilate cabin if overpowering",
+          "Not a medical or air-quality device"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "CLP/labeling if mixture",
+          "SDS if required",
+          "EU responsible person for fragrance mixture if applicable"
+        ],
+        "blockers": [
+          "fragrance-chemical-compliance-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1400679598781501440",
+      "sku": "CJMT1159060",
+      "name": "Body Lights Modified Electric Car Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 189,
+      "supplierCostUsd": 6.89,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 92157,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "electrical-or-powered",
+        "summary": "Powered / electrical / lighting accessory. EEA sale typically needs applicable CE/marking and documentation; none verified in CJ feed.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Follow vehicle electrical limits; professional install if unsure",
+          "Do not modify wiring or bypass fuses",
+          "Keep away from moisture and flammable materials"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "CE/DoC",
+          "voltage rating",
+          "EMC/LVD applicability"
+        ],
+        "blockers": [
+          "electrical-ce-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1418528962069532672",
+      "sku": "CJQC1225218",
+      "name": "Car Dog Pendant Pendant, Car Key Backpack Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 0.66,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 86709,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1770105333235585024",
+      "sku": "CJYD1992006",
+      "name": "Smart Spray Car Mounted Fragrance Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 2.93,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 78495,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "car-fragrance",
+        "summary": "Car fragrance / aromatherapy accessory. Not sold as cosmetic, medicine or air-purifier. No CLP/SDS or fragrance allergen dossier verified in feed.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Do not ingest; keep away from eyes and children",
+          "May cause allergic reaction; ventilate cabin if overpowering",
+          "Not a medical or air-quality device"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "CLP/labeling if mixture",
+          "SDS if required",
+          "EU responsible person for fragrance mixture if applicable"
+        ],
+        "blockers": [
+          "fragrance-chemical-compliance-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "1468451746849361920",
+      "sku": "CJQT1374937",
+      "name": "Women Red Rhinestone Car Interior Accessories",
+      "provider": "cj",
+      "category": "Auto & Mobility",
+      "priceNok": 99,
+      "supplierCostUsd": 1.36,
+      "stock": {
+        "source": "CJ warehouseInventory (catalog snapshot functions/_shared/catalog-data/cj-selected.json)",
+        "warehouseInventory": 330875,
+        "inStock": true,
+        "note": "Snapshot inventory from curated CJ selected set; re-check live CJ before enabling payment.",
+        "catalogStatus": "candidate-for-review"
+      },
+      "plazo": {
+        "production": "Supplier warehouse stock (Asia/EU CJ warehouses — exact warehouse not in this snapshot)",
+        "toNorwayBusinessDays": "8–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "source": "frakt-og-levering.html (CJ warehouse lane)"
+      },
+      "cumplimiento": {
+        "kind": "interior-decor",
+        "summary": "Interior decoration / ornament / sticker. General merchandise; no toy CE claim verified. Small parts may present choking hazard.",
+        "catalogTag": "EU/Nordic curated — no fake medical/drug/CE-toy claims (cj-products.ts)",
+        "manufacturer": "not disclosed in CJ selected snapshot — do not invent",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller/importer of record for Motrull sales. Physical goods manufacturer for CJ lines is still unverified."
+        },
+        "safetyWarnings": [
+          "Small parts — choking hazard for children",
+          "Do not place where it impairs driving view or airbags",
+          "Adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "manufacturer",
+          "material composition (esp. metal/paint)"
+        ],
+        "blockers": [
+          "manufacturer-unverified"
+        ]
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "perSkuLiveFreight": "Not quoted per SKU in this doc; use /api/cj-freight with CJ_API_KEY when env is set (never invent keys)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). Gaps listed under cumplimiento.blockers must be cleared by a human with real supplier docs before any SKU is charged."
+    },
+    {
+      "id": "pfy-auto-mug-std",
+      "sku": "13130008121313253901",
+      "name": "Motrull Wheel Logo Mug 11oz",
+      "provider": "printify",
+      "category": "Mugs",
+      "priceNok": 169,
+      "supplierCostUsd": 5.91,
+      "printifyProductId": "6ab99b3df6ec4c0c6a0fdf74",
+      "printifyVariantId": "79703",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 10.39,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-mug-eu",
+      "sku": "59231495105346654760",
+      "name": "Motrull Wheel Pattern Mug 11oz",
+      "provider": "printify",
+      "category": "Mugs",
+      "priceNok": 159,
+      "supplierCostUsd": 5.88,
+      "printifyProductId": "6ab99b4049ec84eb9c0a7d3e",
+      "printifyVariantId": "62327",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Czech Republic",
+        "printProvider": "OPT OnDemand",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner OPT OnDemand; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 10.39,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-tote",
+      "sku": "17497779195092248342",
+      "name": "Motrull Organic Cotton Tote",
+      "provider": "printify",
+      "category": "Bags",
+      "priceNok": 359,
+      "supplierCostUsd": 13.0,
+      "printifyProductId": "6ab99b43709cc009e0099eb5",
+      "printifyVariantId": "79434",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 7.29,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-poster-art",
+      "sku": "18185599519595958213",
+      "name": "Motrull Wheel Art Poster A3",
+      "provider": "printify",
+      "category": "Posters",
+      "priceNok": 199,
+      "supplierCostUsd": 7.09,
+      "printifyProductId": "6ab99b46709cc009e0099eb7",
+      "printifyVariantId": "62339",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Czech Republic",
+        "printProvider": "OPT OnDemand",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner OPT OnDemand; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 8.49,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-poster-type",
+      "sku": "32157695974756034277",
+      "name": "Motrull \"Drive. Tune. Roll.\" Poster A3",
+      "provider": "printify",
+      "category": "Posters",
+      "priceNok": 199,
+      "supplierCostUsd": 7.09,
+      "printifyProductId": "6ab99b49a0bd120c6301e049",
+      "printifyVariantId": "62339",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Czech Republic",
+        "printProvider": "OPT OnDemand",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner OPT OnDemand; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 8.49,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-journal",
+      "sku": "96008724411669092953",
+      "name": "Motrull Dot-Grid Notebook",
+      "provider": "printify",
+      "category": "Stationery",
+      "priceNok": 239,
+      "supplierCostUsd": 8.82,
+      "printifyProductId": "6ab99b4c71cabd2f82076afc",
+      "printifyVariantId": "65483",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Czech Republic",
+        "printProvider": "OPT OnDemand",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner OPT OnDemand; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 8.79,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-sticker",
+      "sku": "18156769406899166452",
+      "name": "Motrull Wheel Vinyl Sticker",
+      "provider": "printify",
+      "category": "Accessories",
+      "priceNok": 109,
+      "supplierCostUsd": 3.89,
+      "printifyProductId": "6ab99b4f7a233ab55706a96d",
+      "printifyVariantId": "65212",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Czech Republic",
+        "printProvider": "OPT OnDemand",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner OPT OnDemand; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 5.59,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-mousepad",
+      "sku": "19876027541174932530",
+      "name": "Motrull Wheel Mouse Pad",
+      "provider": "printify",
+      "category": "Accessories",
+      "priceNok": 229,
+      "supplierCostUsd": 8.26,
+      "printifyProductId": "6ab99b52885e0b9863076d17",
+      "printifyVariantId": "62329",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Czech Republic",
+        "printProvider": "OPT OnDemand",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner OPT OnDemand; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 8.79,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-tee-black-s",
+      "sku": "12625498217304657306",
+      "name": "Motrull Wheel Tee – Black · S",
+      "provider": "printify",
+      "category": "Apparel",
+      "priceNok": 259,
+      "supplierCostUsd": 9.28,
+      "printifyProductId": "6ab99b54f6ec4c0c6a0fdf86",
+      "printifyVariantId": "38164",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 7.29,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-tee-black-m",
+      "sku": "31131812918865260297",
+      "name": "Motrull Wheel Tee – Black · M",
+      "provider": "printify",
+      "category": "Apparel",
+      "priceNok": 259,
+      "supplierCostUsd": 9.28,
+      "printifyProductId": "6ab99b54f6ec4c0c6a0fdf86",
+      "printifyVariantId": "38178",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 7.29,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-tee-black-l",
+      "sku": "20950705573832293124",
+      "name": "Motrull Wheel Tee – Black · L",
+      "provider": "printify",
+      "category": "Apparel",
+      "priceNok": 259,
+      "supplierCostUsd": 9.28,
+      "printifyProductId": "6ab99b54f6ec4c0c6a0fdf86",
+      "printifyVariantId": "38192",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 7.29,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-tee-black-xl",
+      "sku": "96452992005585258301",
+      "name": "Motrull Wheel Tee – Black · XL",
+      "provider": "printify",
+      "category": "Apparel",
+      "priceNok": 259,
+      "supplierCostUsd": 9.28,
+      "printifyProductId": "6ab99b54f6ec4c0c6a0fdf86",
+      "printifyVariantId": "38206",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 7.29,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-hoodie-black-s",
+      "sku": "36339202865257948943",
+      "name": "Motrull Wheel Hoodie – Black · S",
+      "provider": "printify",
+      "category": "Apparel",
+      "priceNok": 689,
+      "supplierCostUsd": 25.48,
+      "printifyProductId": "6ab99b5682080d60bf0bd8ee",
+      "printifyVariantId": "32918",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 10.89,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-hoodie-black-m",
+      "sku": "12436038847392804198",
+      "name": "Motrull Wheel Hoodie – Black · M",
+      "provider": "printify",
+      "category": "Apparel",
+      "priceNok": 689,
+      "supplierCostUsd": 25.48,
+      "printifyProductId": "6ab99b5682080d60bf0bd8ee",
+      "printifyVariantId": "32919",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 10.89,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-hoodie-black-l",
+      "sku": "33777351803449288591",
+      "name": "Motrull Wheel Hoodie – Black · L",
+      "provider": "printify",
+      "category": "Apparel",
+      "priceNok": 689,
+      "supplierCostUsd": 25.48,
+      "printifyProductId": "6ab99b5682080d60bf0bd8ee",
+      "printifyVariantId": "32920",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 10.89,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    },
+    {
+      "id": "pfy-auto-hoodie-black-xl",
+      "sku": "84238117980641572744",
+      "name": "Motrull Wheel Hoodie – Black · XL",
+      "provider": "printify",
+      "category": "Apparel",
+      "priceNok": 689,
+      "supplierCostUsd": 25.48,
+      "printifyProductId": "6ab99b5682080d60bf0bd8ee",
+      "printifyVariantId": "32921",
+      "stock": {
+        "source": "Printify made-to-order (shop 28847802)",
+        "warehouseInventory": null,
+        "inStock": true,
+        "note": "POD — produced after order by EU print partner; no CJ-style warehouse count. Availability depends on print provider accepting the blueprint.",
+        "catalogStatus": "linked-shop-product"
+      },
+      "plazo": {
+        "production": "2–5 business days (print partner)",
+        "toNorwayBusinessDays": "5–12 typical (production + ship); store band 5–20",
+        "toEuropeBusinessDays": "5–20",
+        "toPeruBusinessDays": "10–25",
+        "hardMaxDays": 30,
+        "origin": "Germany",
+        "printProvider": "Textildruck Europa",
+        "source": "frakt-og-levering.html (POD lane) + Printify product origin"
+      },
+      "cumplimiento": {
+        "kind": "pod-merch",
+        "summary": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "catalogTag": "Real Printify product in shop 28847802, EU print provider (DE/CZ); POD merch only, no cosmetic/medical/toy-safety claims",
+        "manufacturer": "Blank goods + print by Printify partner Textildruck Europa; Motrull design",
+        "responsibleEconomicOperator": {
+          "sellerImporter": "Martinez Lozano Internasjonal Handel",
+          "orgNr": "935 407 095 MVA",
+          "address": "Norbygata 19, 0187 Oslo, Norge",
+          "note": "Seller of record for Motrull-branded POD merch printed in DE/CZ."
+        },
+        "safetyWarnings": [
+          "Apparel/mugs/posters — follow care label; ceramics breakable",
+          "Not a toy; not a medical device",
+          "Sticker adhesives may mark surfaces"
+        ],
+        "destinationAvailability": [
+          "NO",
+          "EU",
+          "PE"
+        ],
+        "gaps": [
+          "blank-goods manufacturer legal name beyond print provider"
+        ],
+        "blockers": []
+      },
+      "shippingQuote": {
+        "storeFlatRates": {
+          "NO": {
+            "amount": "79 NOK",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "EU": {
+            "amount": "€7.90",
+            "plazoBusinessDays": "5–20",
+            "source": "frakt-og-levering.html"
+          },
+          "PE": {
+            "amount": "S/ 14",
+            "plazoBusinessDays": "10–25",
+            "source": "frakt-og-levering.html"
+          }
+        },
+        "printifyShippingNoUsd": 10.89,
+        "note": "Customer pays store flat rate; Printify shippingNoUsd is supplier-side quote from catalog snapshot (not invented)."
+      },
+      "vatTreatment": {
+        "NO": "25% MVA included in NOK retail price",
+        "EU": "VAT treatment per destination; store shows EUR price derived from NOK",
+        "PE": "Import duties/VAT may apply to buyer; store shows PEN price derived from NOK"
+      },
+      "returnAddress": "Norbygata 19, 0187 Oslo, Norge (returadresse bekreftes på e-post ved angrerett; se /angrerett)",
+      "chargeReady": false,
+      "chargeReadyReason": "Checkout paused (CHECKOUT_ENABLED=false). POD compliance is documented; do not enable charging until owner confirms payment provider env (existing keys only — never invent)."
+    }
+  ]
+}

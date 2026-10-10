@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Motrull | Biltilbehør til bilen din</title>
-<meta name="description" content="Motrull – biltilbehør for Norge. Organisering, komfort, bilduft og mer. Frakt 79 kr · 14 dagers angrerett. Klar for langtur?">
+<meta name="description" content="Motrull – biltilbehør for Norge. Organisering, komfort, bilduft og mer. Gratis frakt over 999 kr · 30 dagers retur. Klar for langtur?">
 <link rel="canonical" href="https://motrull.no/">
 <meta name="application-name" content="Motrull">
 <meta name="theme-color" content="#1C1F23">
@@ -12,11 +12,11 @@
 <meta property="og:site_name" content="Motrull">
 <meta property="og:locale" content="nb_NO">
 <meta property="og:title" content="Motrull | Biltilbehør til bilen din">
-<meta property="og:description" content="Motrull – biltilbehør for Norge. Organisering, komfort, bilduft og mer. Frakt 79 kr · 14 dagers angrerett. Klar for langtur?">
+<meta property="og:description" content="Motrull – biltilbehør for Norge. Organisering, komfort, bilduft og mer. Gratis frakt over 999 kr · 30 dagers retur. Klar for langtur?">
 <meta property="og:url" content="https://motrull.no/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Motrull | Biltilbehør til bilen din">
-<meta name="twitter:description" content="Motrull – biltilbehør for Norge. Organisering, komfort, bilduft og mer. Frakt 79 kr · 14 dagers angrerett.">
+<meta name="twitter:description" content="Motrull – biltilbehør for Norge. Organisering, komfort, bilduft og mer. Gratis frakt over 999 kr · 30 dagers retur.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -95,13 +95,24 @@ button,select,input{font:inherit}
 }
 .hero-visual{
   position:absolute;inset:0;
-  background:
-    linear-gradient(105deg,rgba(28,31,35,.92) 0%,rgba(28,31,35,.55) 42%,rgba(28,31,35,.25) 100%),
-    linear-gradient(180deg,transparent 40%,var(--graphite) 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2323282E'/%3E%3Cstop offset='1' stop-color='%231C1F23'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='1200' height='800'/%3E%3Cpath d='M0 520h1200' stroke='%232E343B' stroke-width='2'/%3E%3Cpath d='M80 520 L220 280 H980 L1120 520' fill='none' stroke='%238A939B' stroke-width='3' opacity='.35'/%3E%3Crect x='300' y='340' width='600' height='180' rx='8' fill='%2314171B' stroke='%23FF6A13' stroke-width='2' opacity='.5'/%3E%3Ccircle cx='380' cy='620' r='70' fill='none' stroke='%238A939B' stroke-width='8' opacity='.4'/%3E%3Ccircle cx='820' cy='620' r='70' fill='none' stroke='%238A939B' stroke-width='8' opacity='.4'/%3E%3C/svg%3E") center/cover no-repeat;
+  overflow:hidden;
+  background:var(--graphite);
   animation:heroFade 1.1s ease-out both;
 }
-@keyframes heroFade{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+.hero-visual img{
+  width:100%;height:100%;object-fit:cover;object-position:center 40%;
+  display:block;transform:scale(1.04);
+  animation:heroZoom 1.2s ease-out both;
+}
+.hero-visual::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(105deg,rgba(28,31,35,.88) 0%,rgba(28,31,35,.45) 48%,rgba(28,31,35,.2) 100%),
+    linear-gradient(180deg,transparent 35%,rgba(28,31,35,.92) 100%);
+  pointer-events:none;
+}
+@keyframes heroFade{from{opacity:0}to{opacity:1}}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1.04)}}
 .herocontent{
   position:relative;z-index:1;
   padding:12vh 5% 8vh;
@@ -319,7 +330,13 @@ button,select,input{font:inherit}
 @media(max-width:760px){
   .products,.mest-solgt .products{grid-template-columns:repeat(2,1fr)}
   .categories{grid-template-columns:repeat(2,1fr)}
-  .hero{min-height:70vh}
+  .hero{min-height:88vh}
+  .hero-visual img{object-position:center 35%}
+  .hero-visual::after{
+    background:
+      linear-gradient(180deg,rgba(28,31,35,.35) 0%,rgba(28,31,35,.55) 45%,rgba(28,31,35,.92) 100%);
+  }
+  .herocontent{padding:16vh 5% 10vh;max-width:100%}
   .topbar{gap:6px 14px;font-size:11px}
 }
 @media(max-width:480px){
@@ -328,6 +345,7 @@ button,select,input{font:inherit}
   .full{grid-column:auto}
   .brand{font-size:20px}
   .travel-grid{grid-template-columns:1fr}
+  .topbar .pay{flex-wrap:wrap;justify-content:center}
 }
 #nordicCatalogTools{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px}
 #nordicCatalogTools input,#nordicCatalogTools select{
@@ -340,21 +358,32 @@ button,select,input{font:inherit}
 </head>
 <body>
 <div class="topbar" role="region" aria-label="Fordeler">
-  <span><strong>Frakt 79 kr</strong> per ordre i Norge</span>
-  <span><strong>14 dagers angrerett</strong></span>
-  <span class="pay"><strong>Betaling</strong> <span class="pay-logo">Stripe</span> <span class="pay-logo">Kort</span></span>
+  <span><strong>Gratis frakt</strong> over 999 kr</span>
+  <span><strong>30 dagers retur</strong></span>
+  <span class="pay"><strong>Betaling</strong> <span class="pay-logo">Stripe</span> <span class="pay-logo">Kort</span> <span class="pay-logo" title="Kommer snart">Klarna · kommer snart</span> <span class="pay-logo" title="Kommer snart">Vipps · kommer snart</span></span>
+  <span><strong>Kontakt</strong> <a href="mailto:kontakt@motrull.no" style="color:inherit">kontakt@motrull.no</a> · <a href="tel:+4791290416" style="color:inherit">+47 912 90 416</a></span>
 </div>
 
 <nav class="nav">
   <a class="brand" href="/">Motrull</a>
   <div class="navright">
     <a class="control" href="#kategorier">Kategorier</a>
+    <a class="control" href="/kontakt">Kontakt</a>
     <button class="control" type="button" id="cartOpen">Handlekurv (<span id="count">0</span>)</button>
   </div>
 </nav>
 
 <section class="hero" aria-label="Forside">
-  <div class="hero-visual" aria-hidden="true"></div>
+  <div class="hero-visual" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=80"
+      alt=""
+      width="1800"
+      height="1200"
+      decoding="async"
+      fetchpriority="high"
+    >
+  </div>
   <div class="herocontent">
     <div class="eyebrow">Biltilbehør · Norge</div>
     <h1>Motrull</h1>
@@ -444,7 +473,7 @@ button,select,input{font:inherit}
     <div>
       <div class="eyebrow">Produkter</div>
       <h2>Til bilen</h2>
-      <p class="muted">Alle priser i NOK inkl. 25 % MVA · Frakt 79 kr per ordre · 14 dagers angrerett.</p>
+      <p class="muted">Alle priser i NOK inkl. 25 % MVA · Frakt 79 kr · gratis over 999 kr · 30 dagers retur.</p>
     </div>
     <div class="filters" id="filters"></div>
   </div>
@@ -519,7 +548,8 @@ button,select,input{font:inherit}
     <a href="/kontakt">Kontakt</a>
     <a href="/blog/">Blogg</a>
   </nav>
-  <p>Priser i NOK inkl. 25 % MVA · Frakt 79 kr per ordre · 14 dagers angrerett</p>
+  <p>Priser i NOK inkl. 25 % MVA · Frakt 79 kr · gratis over 999 kr · 30 dagers retur</p>
+  <p>Kontakt: <a href="mailto:kontakt@motrull.no">kontakt@motrull.no</a> · <a href="tel:+4791290416">+47 912 90 416</a></p>
   <p>© 2026 Motrull</p>
 </footer>
 
@@ -529,7 +559,8 @@ button,select,input{font:inherit}
   <div class="drawerbody"><div id="cartItems"></div><div id="shipping"></div></div>
   <div class="drawerfoot">
     <div class="total"><span>Totalt</span><span id="total">0</span></div>
-    <button class="checkout" type="button" id="checkout">Gå til kassen</button>
+    <p class="checkout-paused" style="margin:0 0 10px;font-size:13px;line-height:1.45;opacity:.85">Betaling er midlertidig stengt mens vi dokumenterer lager, leveringstid og produktsikkerhet. Spørsmål: <a href="mailto:kontakt@motrull.no">kontakt@motrull.no</a>.</p>
+    <button class="checkout" type="button" id="checkout" disabled aria-disabled="true" style="opacity:.55;cursor:not-allowed">KOMMER SNART</button>
   </div>
 </aside>
 <div class="modal" id="modal">
@@ -545,8 +576,6 @@ button,select,input{font:inherit}
     <input required class="full" name="address" placeholder="Adresse">
     <select name="country" id="country" class="full">
       <option value="Norway">Norge</option>
-      <option value="Europe">Europa</option>
-      <option value="Peru">Peru</option>
     </select>
     <div class="full notice"></div>
     <button class="checkout full" type="submit">Gå til betaling</button>
@@ -645,6 +674,7 @@ function renderTravel(){
 
 function add(id){cart[id]=(cart[id]||0)+1;renderCart();openCart()}
 function qty(id,d){cart[id]+=d;if(cart[id]<=0)delete cart[id];renderCart()}
+const FREE_SHIP_NOK=999;
 function renderCart(){
   let sub=0,count=0;
   $('#cartItems').innerHTML=Object.entries(cart).map(([id,q])=>{
@@ -653,10 +683,12 @@ function renderCart(){
     return '<div class="cartitem"><div><strong>'+esc(p.name)+'</strong><div class="muted">'+money(p.base)+'</div></div><div class="qty"><button type="button" onclick="qty('+id+',-1)">−</button><span>'+q+'</span><button type="button" onclick="qty('+id+',1)">+</button></div></div>';
   }).join('')||'<p class="muted">Handlekurven er tom.</p>';
   $('#count').textContent=count;
-  const opts=markets[market].delivery;
-  if(ship>=opts.length)ship=0;
-  $('#shipping').innerHTML=count?'<h4>Levering</h4>'+opts.map((o,i)=>'<label class="shipopt"><input type="radio" name="ship" '+(ship===i?'checked':'')+' onchange="ship='+i+';renderCart()"> '+o[0]+' · '+o[1]+' · '+new Intl.NumberFormat(markets[market].locale,{style:'currency',currency:markets[market].currency,maximumFractionDigits:0}).format(o[2])+'</label>').join(''):'';
-  const shipCost=count?opts[ship][2]/markets[market].rate:0;
+  const subNok=sub*markets[market].rate;
+  const freeShip=subNok>=FREE_SHIP_NOK;
+  const shipNok=freeShip?0:79;
+  const shipLabel=freeShip?'Gratis frakt (over 999 kr)':'Standard · 5–20 virkedager · 79 kr';
+  $('#shipping').innerHTML=count?'<h4>Levering</h4><label class="shipopt"><input type="radio" name="ship" checked> '+shipLabel+(freeShip?'':' <span class="muted">(gratis over 999 kr)</span>')+'</label>':'';
+  const shipCost=count?shipNok/markets[market].rate:0;
   $('#total').textContent=money(sub+shipCost);
 }
 function openCart(){$('#drawer').classList.add('open');$('#overlay').classList.add('show')}
@@ -664,9 +696,9 @@ function closeAll(){$('#drawer').classList.remove('open');$('#modal').classList.
 $('#cartOpen').onclick=openCart;
 $('#cartClose').onclick=closeAll;
 $('#overlay').onclick=closeAll;
-$('#checkout').onclick=()=>{if(!Object.keys(cart).length)return;$('#drawer').classList.remove('open');$('#modal').classList.add('show');$('#country').value=markets[market].country};
+$('#checkout').onclick=null;
 $('#modalClose').onclick=closeAll;
-$('#checkoutForm').onsubmit=e=>{e.preventDefault();$('#checkoutForm').style.display='none';$('#success').style.display='block'};
+$('#checkoutForm').onsubmit=e=>{e.preventDefault()};
 
 function applyCatSearch(){
   const sel=$('#catSelect');
