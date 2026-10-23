@@ -9,13 +9,13 @@ Auditoría 2026-10-23. Rama `cursor/motrull-no-auditoria-2026-10` desde `main`, 
 - Notas de `supplier-config.json` sin nombres de marca ni nombres de variables. Claves y flags sin cambios.
 - `docs/ordrebekreftelse-mal.md` (bokmål, enlaza kjopsvilkar/angrerett/angreskjema de motrull-no.no.) y `docs/voec-mva-sjekkliste.md`.
 - Búsqueda (sin distinguir mayúsculas) de la app de mensajería prohibida en tiendas nórdicas: sin resultados.
-- Búsqueda de claves `sk_live_`/`sk_test_`/`ghp_`/`EAA`: vacía. `functions/api/create-checkout-session.ts` sin cambios (la comprobación `sk_live_` sigue igual). `CHECKOUT_ENABLED = false` sin tocar.
-- **Carpeta `pe/` (canal Perú) en `main`.** Quitarla es decisión del dueño: no se ha borrado. Solo se quitó el nombre del proveedor de `pe/privacidad.html`. `node tests/smoke-pe.mjs`: todas las comprobaciones pasan.
+- Búsqueda de claves `sk_live_`/`sk_test_`/`ghp_`/`EAA`: vacía. `functions/api/create-checkout-session.ts` sin cambios (comprobación pasada a `sk_test_` con OK del dueño, 2026-10-23). `CHECKOUT_ENABLED = false` sin tocar.
+- **Carpeta `pe/` (canal Perú):** eliminada con OK del dueño (2026-10-23), junto con `region-switch.js`, `tests/smoke-pe.mjs` y las URLs `/pe/` del sitemap. `/pe/*` redirige 301 a `/`.
 
 ## Por confirmar — no se ha hecho
 
 1. **Rentabilidad y certificación de cada producto.** El catálogo público solo trae `priceNok`, sin coste ni margen ni certificado claro. No se ha ocultado ni borrado ninguno.
-2. **Stripe `sk_live_` → modo prueba.** Decisión del dueño. No se ha ejecutado ningún pago.
+2. **Stripe → modo prueba:** hecho con OK del dueño (2026-10-23); el código exige `sk_test_`.
 3. **VOEC / MVA:** régimen (MVA ordinaria vs VOEC), umbral, número VOEC, si el 25 % vale para todo el catálogo. Ver `docs/voec-mva-sjekkliste.md`.
 4. **Despliegue:** nombre del proyecto Cloudflare Pages e integración Git vs subida directa. `netlify.toml`, `_redirects` y `functions/` sin tocar.
 5. **`functions/`** (respuesta del catálogo y resumen interno a Make) sigue nombrando proveedores; `printful-products.ts` devuelve `brand` con el nombre del proveedor como valor por defecto. La tienda ya no lo pinta, pero cambiar `functions/` queda pendiente.

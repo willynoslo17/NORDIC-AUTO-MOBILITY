@@ -2,7 +2,7 @@
 
 Required Cloudflare Pages / Netlify production environment variables (do not commit secrets):
 
-- `STRIPE_SECRET_KEY` — live secret key starting with `sk_live_`
+- `STRIPE_SECRET_KEY` — TEST-mode secret key starting with `sk_test_` (Stripe test mode; live keys are rejected by the code)
 - `STRIPE_WEBHOOK_SECRET` — webhook signing secret from Stripe
 - `MAKE_ORDERS_WEBHOOK` — Make.com / automation webhook URL
 - `CJ_API_KEY` — CJ Dropshipping API key
